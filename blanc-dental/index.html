@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blanc Dental | Faria Lima, São Paulo</title>
-<meta name="description" content="High-end dental clinic on Faria Lima. Implants, dental veneers, facial harmonization and invisible orthodontics.">
+<title>Blanc Dental | Brickell, Miami</title>
+<meta name="description" content="High-end dental clinic in Brickell, Miami. Implants, dental veneers, facial harmonization and invisible orthodontics.">
 <meta name="theme-color" content="#0B1622">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%230B1622'/%3E%3Cpath d='M32 14c5 0 8 3.5 8 8.5 0 5.5-2.5 9-2.5 14.5s1.5 8.5-1.5 8.5-2.5-3-3-8c-.3-3-1.2-3-1.5 0-.5 5-.5 8-3 8s-1.5-3-1.5-8.5c0-5.5-2.5-9-2.5-14.5 0-5 3-8.5 8-8.5z' fill='%234AADDF' opacity='.85'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -513,6 +513,30 @@ a { color: inherit; text-decoration: none; }
 }
 .cta-tel svg { width: 16px; height: 16px; color: var(--blue); }
 
+.cta-form {
+  max-width: 520px; margin: 0 auto 28px; text-align: left;
+}
+.cta-fields {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.cta-in {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
+  padding: 13px 15px; color: var(--white);
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 300;
+  transition: border-color 0.3s, background 0.3s;
+}
+.cta-in::placeholder { color: var(--cool); }
+.cta-in:focus { outline: none; border-color: var(--blue); background: rgba(255,255,255,0.06); }
+.cta-ta { grid-column: 1 / -1; resize: vertical; min-height: 92px; line-height: 1.6; }
+.cta-hp { position: absolute; left: -9999px; opacity: 0; }
+.cta-submit { margin-top: 16px; width: 100%; justify-content: center; }
+.cta-status {
+  font-size: 0.82rem; font-weight: 400; margin-top: 14px;
+  min-height: 1em; color: var(--pale);
+}
+@media (max-width: 520px) { .cta-fields { grid-template-columns: 1fr; } }
+
 /* ═══ VISITA (map) ═══ */
 .visita {
   padding: 64px 0;
@@ -658,14 +682,14 @@ a { color: inherit; text-decoration: none; }
 /* ═══ WA ═══ */
 .wa {
   position: fixed; bottom: 24px; right: 24px; z-index: 90;
-  width: 52px; height: 52px; background: #25D366; border-radius: 50%;
+  width: 52px; height: 52px; background: var(--blue); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 20px rgba(37,211,102,0.3);
-  transition: transform 0.3s; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(74,173,223,0.35);
+  transition: transform 0.3s, background 0.3s; cursor: pointer;
   opacity: 0; animation: fadeUp 0.6s 1.5s forwards;
 }
-.wa:hover { transform: scale(1.08); }
-.wa svg { width: 24px; height: 24px; color: #fff; }
+.wa:hover { transform: scale(1.08); background: var(--blue-deep); }
+.wa svg { width: 22px; height: 22px; color: #fff; }
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
@@ -737,7 +761,7 @@ a { color: inherit; text-decoration: none; }
       </video>
     </div>
     <div class="hero-content">
-      <div class="hero-tag">Faria Lima, São Paulo</div>
+      <div class="hero-tag">Brickell, Miami</div>
       <h1>The aesthetics of your smile start <i>here</i></h1>
       <p class="hero-p">3D technology, next-generation materials and a careful eye for every detail. Dentistry that blends science and art.</p>
       <div class="hero-ctas">
@@ -760,7 +784,7 @@ a { color: inherit; text-decoration: none; }
     <div class="sobre-grid">
       <div class="sobre-img-wrap dr-rv-img">
         <div class="sobre-img">
-          <img src="img/doutor.jpg" alt="Dr. Rafael Blanc" loading="lazy" width="480" height="640">
+          <img src="img/doutor.jpg" alt="Dr. Daniel Blanc" loading="lazy" width="480" height="640">
         </div>
         <div class="sobre-badge dr-rv" style="transition-delay:0.3s">
           <strong>15+</strong>
@@ -768,22 +792,22 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
       <div class="sobre-txt dr-rv" style="transition-delay:0.15s">
-        <span class="lbl">Dr. Rafael Blanc</span>
+        <span class="lbl">Dr. Daniel Blanc</span>
         <h2>Technical precision.<br><i>Artistic eye.</i></h2>
-        <p>Dr. Rafael Blanc is a reference in aesthetic dentistry and oral rehabilitation. Trained at USP with a specialization in advanced dental aesthetics, he handles every case with scientific rigor and sensitivity.</p>
-        <p>His clinic on Faria Lima was designed to offer a distinctive experience, from digital diagnosis to the final result.</p>
+        <p>Dr. Daniel Blanc is a leader in aesthetic dentistry and oral rehabilitation. Trained at Harvard with a specialization in advanced dental aesthetics, he handles every case with scientific rigor and sensitivity.</p>
+        <p>His clinic in Brickell was designed to offer a distinctive experience, from digital diagnosis to the final result.</p>
         <div class="creds">
           <div class="cred">
             <div class="cred-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
             </div>
-            <span><strong>USP</strong> · Bachelor's and Master's</span>
+            <span><strong>Harvard</strong> · DMD & MSc</span>
           </div>
           <div class="cred">
             <div class="cred-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="9" r="6"/></svg>
             </div>
-            <span><strong>CRO-SP 98.542</strong> · Dental Prosthetics</span>
+            <span><strong>Florida Board of Dentistry DN19842</strong> · Prosthodontics</span>
           </div>
           <div class="cred">
             <div class="cred-ico">
@@ -897,15 +921,29 @@ a { color: inherit; text-decoration: none; }
     <div class="cta-inner rv">
       <span class="lbl" style="justify-content:center;display:flex">Book now</span>
       <h2>Ready for your new <i>smile</i>?</h2>
-      <p>Book your evaluation with no obligation. Dr. Rafael Blanc will create an exclusive digital plan just for you.</p>
-      <div class="cta-row">
-        <a href="#" class="btn-main">
-          Book an appointment
+      <p>Book your evaluation with no obligation. Dr. Daniel Blanc will create an exclusive digital plan just for you.</p>
+      <form class="cta-form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="dc52a1b4-064c-413c-be04-ad656c9829a4">
+        <input type="hidden" name="subject" value="New appointment request — Blanc Dental">
+        <input type="hidden" name="from_name" value="Blanc Dental">
+        <input type="text" name="botcheck" class="cta-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="cta-fields">
+          <input class="cta-in" type="text" name="name" placeholder="Full name" required>
+          <input class="cta-in" type="email" name="email" placeholder="Email" required>
+          <input class="cta-in" type="tel" name="phone" placeholder="Phone">
+          <input class="cta-in" type="text" name="interest" placeholder="Treatment of interest">
+          <textarea class="cta-in cta-ta" name="message" placeholder="Tell us briefly what you're looking for" required></textarea>
+        </div>
+        <button type="submit" class="btn-main cta-submit">
+          Request an appointment
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        </button>
+        <p class="cta-status" id="bookingStatus" aria-live="polite"></p>
+      </form>
+      <div class="cta-row">
         <div class="cta-tel">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          (11) 3042-8800
+          (305) 424-9100
         </div>
       </div>
     </div>
@@ -919,26 +957,26 @@ a { color: inherit; text-decoration: none; }
       <div class="visita-info rv">
         <span class="lbl">Location</span>
         <h2>Come <i>visit</i> us</h2>
-        <p class="visita-desc">We're in the heart of Faria Lima, with easy access by subway, bus and on-site parking in the building.</p>
+        <p class="visita-desc">We're in the heart of Brickell, with easy access by Metromover, transit and on-site valet parking in the building.</p>
 
         <div class="visita-items">
           <div class="visita-item">
             <div class="visita-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <p><strong>Av. Brig. Faria Lima, 3477</strong><br>South Tower, 22nd floor · Suite 2208 · Itaim Bibi, SP</p>
+            <p><strong>1450 Brickell Ave</strong><br>19th floor · Suite 1900 · Brickell · Miami, FL 33131</p>
           </div>
           <div class="visita-item">
             <div class="visita-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
-            <p><strong>(11) 3042-8800</strong></p>
+            <p><strong>(305) 424-9100</strong></p>
           </div>
           <div class="visita-item">
             <div class="visita-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <p><strong>contato@blancodonto.com.br</strong></p>
+            <p><strong>hello@blancdental.com</strong></p>
           </div>
         </div>
 
@@ -950,7 +988,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
       <div class="visita-map rv rv-d2">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8!2d-46.6916!3d-23.5827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f1068b21b7%3A0x4e6a246a7db3625c!2sAv.%20Brig.%20Faria%20Lima%2C%203477%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps?q=1450+Brickell+Ave,+Miami,+FL+33131&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -962,7 +1000,7 @@ a { color: inherit; text-decoration: none; }
     <div class="foot-grid">
       <div>
         <span class="foot-brand">Blanc<span>.</span></span>
-        <p class="foot-desc">High-end dentistry with digital technology and personalized care on Av. Faria Lima.</p>
+        <p class="foot-desc">High-end dentistry with digital technology and personalized care in Brickell, Miami.</p>
       </div>
       <div>
         <h4>Specialties</h4>
@@ -990,19 +1028,19 @@ a { color: inherit; text-decoration: none; }
             <div class="foot-addr-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <div class="foot-addr-txt">Av. Brig. Faria Lima, 3477<br>South Tower, 22nd floor · Suite 2208<br>Itaim Bibi · São Paulo, SP</div>
+            <div class="foot-addr-txt">1450 Brickell Ave<br>19th floor · Suite 1900<br>Brickell · Miami, FL 33131</div>
           </div>
           <div class="foot-addr-item">
             <div class="foot-addr-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
-            <div class="foot-addr-txt">(11) 3042-8800<br>contato@blancodonto.com.br</div>
+            <div class="foot-addr-txt">(305) 424-9100<br>hello@blancdental.com</div>
           </div>
         </div>
       </div>
     </div>
     <div class="foot-bar">
-      <span>&copy; 2025 Blanc Dental. CRO-SP CL 22.481</span>
+      <span>&copy; 2026 Blanc Dental · Miami, FL</span>
       <div class="foot-soc">
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -1013,8 +1051,8 @@ a { color: inherit; text-decoration: none; }
 </footer>
 
 <!-- WA -->
-<a href="#" class="wa" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="#contato" class="wa" aria-label="Contact us">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
 </a>
 
 <script>
@@ -1086,6 +1124,40 @@ if (credsEl) credsObs.observe(credsEl);
 
   window.addEventListener('scroll', onScroll, {passive: true});
   onScroll();
+})();
+
+// Web3Forms booking submission
+(function() {
+  const form = document.getElementById('bookingForm');
+  const status = document.getElementById('bookingStatus');
+  if (!form) return;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type=submit]');
+    status.style.color = '';
+    status.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await res.json();
+      if (res.ok) {
+        status.style.color = '#4AADDF';
+        status.textContent = 'Thank you! We’ll reach out to schedule your evaluation.';
+        form.reset();
+      } else {
+        status.style.color = '#4AADDF';
+        status.textContent = data.message || 'Something went wrong. Please try again.';
+      }
+    } catch (err) {
+      status.style.color = '#4AADDF';
+      status.textContent = 'Network error. Please call (305) 424-9100.';
+    }
+    btn.disabled = false;
+  });
 })();
 </script>
 </body>
