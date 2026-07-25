@@ -23,11 +23,11 @@
   "@type":"ProfessionalService",
   "name":"BRASA Studio",
   "description":"A branding and web studio specialized in food: restaurants, cafes and bars.",
-  "areaServed":"Brazil",
+  "areaServed":"United States",
   "slogan":"A brand hungry to fill every table.",
-  "email":"ola@brasa.studio",
-  "telephone":"+5511987654321",
-  "address":{"@type":"PostalAddress","streetAddress":"Rua Aspicuelta, 232, Vila Madalena","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},
+  "email":"hello@brasa.studio",
+  "telephone":"+12139084200",
+  "address":{"@type":"PostalAddress","streetAddress":"800 Traction Ave, Suite 300","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90013","addressCountry":"US"},
   "sameAs":["https://instagram.com/brasa.studio"]
 }
 </script>
@@ -224,6 +224,15 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
 .cta__btn{margin-top:2.5rem;display:inline-flex;align-items:center;gap:.8rem;background:var(--papel);color:var(--tinta);padding:1.3rem 2.6rem;border-radius:60px;font-family:var(--ff-m);font-size:.9rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;transition:transform .25s,background .3s,color .3s}
 .cta__btn:hover{background:var(--tinta);color:var(--papel)}
 .cta__sub{font-family:var(--ff-m);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;margin-top:1.8rem;opacity:.85}
+.cta__form{max-width:560px;margin:2.8rem auto 0;text-align:left}
+.cta__fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cta__in{width:100%;background:#ffffff1a;border:1.5px solid #f3efe74d;border-radius:10px;padding:1rem 1.1rem;color:var(--papel);font-family:var(--ff-m);font-size:.9rem;transition:border-color .3s,background .3s}
+.cta__in::placeholder{color:#f3efe799;text-transform:none}
+.cta__in:focus{outline:none;border-color:var(--papel);background:#ffffff26}
+.cta__ta{grid-column:1/-1;resize:vertical;min-height:96px;line-height:1.5}
+.cta__hp{position:absolute;left:-9999px;opacity:0}
+.cta__form .cta__btn{margin-top:1.4rem}
+.cta__status{font-family:var(--ff-m);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;margin-top:1.2rem;min-height:1em;font-weight:600}
 
 /* FOOTER */
 .footer{background:var(--tinta);color:var(--papel);padding:4rem 2.2rem 2rem}
@@ -236,9 +245,9 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
 .footer__col a:hover{color:var(--brasa)}
 .footer__bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;font-family:var(--ff-m);font-size:.72rem;text-transform:uppercase;color:#f3efe680}
 
-.wpp{position:fixed;bottom:1.6rem;right:1.6rem;z-index:120;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px #25d36659;transition:transform .3s}
-.wpp:hover{transform:scale(1.1)}
-.wpp svg{width:28px;height:28px;fill:#fff}
+.fab{position:fixed;bottom:1.6rem;right:1.6rem;z-index:120;width:56px;height:56px;border-radius:50%;background:var(--brasa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px #e8442a66;transition:transform .3s}
+.fab:hover{transform:scale(1.1)}
+.fab svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 .rv{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
 .rv.on{opacity:1;transform:none}
@@ -328,7 +337,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
   <div class="hero__top">
     <span><b>●</b> Branding for food only</span>
     <span>Brand · Menu · Website</span>
-    <span>Vila Madalena, SP · Since 2017</span>
+    <span>Arts District, LA · Since 2017</span>
   </div>
   <div class="hero__mid">
     <h1 class="hero__title">
@@ -381,40 +390,40 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
     <article class="case rv">
       <div class="case__vis v-fornalha">
         <span class="case__tag">Neapolitan pizzeria</span>
-        <div class="case__mark" style="font-size:3rem">FORNALHA<small>WOOD-FIRED · 2023</small></div>
+        <div class="case__mark" style="font-size:3rem">EMBER<small>WOOD-FIRED · 2023</small></div>
       </div>
       <div class="case__info">
-        <div class="case__name">Fornalha<span>Brand + Menu + Website</span></div>
+        <div class="case__name">Ember<span>Brand + Menu + Website</span></div>
         <div class="case__metric"><b>+180%</b><small>in reservations</small></div>
       </div>
     </article>
     <article class="case rv rv-1">
       <div class="case__vis v-limao">
         <span class="case__tag">Vegetarian restaurant</span>
-        <div class="case__mark" style="font-size:2.6rem">verde<br>limão<small>FARM TO TABLE</small></div>
+        <div class="case__mark" style="font-size:2.6rem">Sage<br>Kitchen<small>FARM TO TABLE</small></div>
       </div>
       <div class="case__info">
-        <div class="case__name">Verde Limão<span>Rebranding + Delivery</span></div>
+        <div class="case__name">Sage Kitchen<span>Rebranding + Delivery</span></div>
         <div class="case__metric"><b>Sold out</b><small>3 weekends</small></div>
       </div>
     </article>
     <article class="case rv">
       <div class="case__vis v-boteco">
         <span class="case__tag">Neighborhood bar</span>
-        <div class="case__mark" style="font-size:2.8rem">Boteco<br>do Zé<small>COLD BEER &amp; BITES</small></div>
+        <div class="case__mark" style="font-size:2.8rem">Joe's<br>Tavern<small>COLD BEER &amp; BITES</small></div>
       </div>
       <div class="case__info">
-        <div class="case__name">Boteco do Zé<span>Identity + Packaging</span></div>
+        <div class="case__name">Joe's Tavern<span>Identity + Packaging</span></div>
         <div class="case__metric"><b>2x</b><small>revenue</small></div>
       </div>
     </article>
     <article class="case rv rv-1">
       <div class="case__vis v-kaffa">
         <span class="case__tag">Specialty coffee</span>
-        <div class="case__mark" style="font-size:3rem">KAFFA<small>SPECIALTY COFFEE</small></div>
+        <div class="case__mark" style="font-size:3rem">DAYBREAK<small>SPECIALTY COFFEE</small></div>
       </div>
       <div class="case__info">
-        <div class="case__name">Kaffa<span>Brand + Website + Social</span></div>
+        <div class="case__name">Daybreak<span>Brand + Website + Social</span></div>
         <div class="case__metric"><b>3</b><small>new locations</small></div>
       </div>
     </article>
@@ -451,7 +460,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
 <section class="logos">
   <div class="logos__label">Brands that have worked with BRASA</div>
   <div class="logos__row">
-    <span>Fornalha</span><span>Verde Limão</span><span>Boteco do Zé</span><span>Kaffa</span><span>Maré</span><span>Dona Fubá</span><span>Tostado</span><span>Pão &amp; Cia</span>
+    <span>Ember</span><span>Sage Kitchen</span><span>Joe's Tavern</span><span>Daybreak</span><span>Tidewater</span><span>Cornbread Co.</span><span>Toasted</span><span>Loaf &amp; Co.</span>
   </div>
 </section>
 
@@ -477,10 +486,10 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
     </div>
   </div>
   <div class="time__grid">
-    <div class="member mag rv"><div class="member__av"><img src="img/marina.jpg" alt="Marina Costa" width="408" height="442" loading="lazy"></div><div class="member__nm">Marina Costa</div><div class="member__rl">Creative director</div></div>
-    <div class="member mag rv rv-1"><div class="member__av"><img src="img/rafael.jpg" alt="Rafael Nunes" width="408" height="347" loading="lazy"></div><div class="member__nm">Rafael Nunes</div><div class="member__rl">Designer &amp; branding</div></div>
-    <div class="member mag rv rv-2"><div class="member__av"><img src="img/bia.jpg" alt="Bia Tavares" width="408" height="524" loading="lazy"></div><div class="member__nm">Bia Tavares</div><div class="member__rl">Web &amp; motion</div></div>
-    <div class="member mag rv rv-3"><div class="member__av"><img src="img/teo.jpg" alt="Téo Andrade" width="373" height="325" loading="lazy"></div><div class="member__nm">Téo Andrade</div><div class="member__rl">Strategy</div></div>
+    <div class="member mag rv"><div class="member__av"><img src="img/marina.jpg" alt="Maya Bennett" width="408" height="442" loading="lazy"></div><div class="member__nm">Maya Bennett</div><div class="member__rl">Creative director</div></div>
+    <div class="member mag rv rv-1"><div class="member__av"><img src="img/rafael.jpg" alt="Ryan Cole" width="408" height="347" loading="lazy"></div><div class="member__nm">Ryan Cole</div><div class="member__rl">Designer &amp; branding</div></div>
+    <div class="member mag rv rv-2"><div class="member__av"><img src="img/bia.jpg" alt="Bella Tran" width="408" height="524" loading="lazy"></div><div class="member__nm">Bella Tran</div><div class="member__rl">Web &amp; motion</div></div>
+    <div class="member mag rv rv-3"><div class="member__av"><img src="img/teo.jpg" alt="Theo Marsh" width="373" height="325" loading="lazy"></div><div class="member__nm">Theo Marsh</div><div class="member__rl">Strategy</div></div>
   </div>
 </section>
 
@@ -493,19 +502,19 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
   <div class="depo__grid">
     <div class="depo__item rv">
       <p>The line doubled after the new brand. People photograph the packaging and post it, it became free advertising.</p>
-      <div class="depo__who"><div class="depo__av"><img src="img/camila.jpg" alt="Camila Rocha" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Camila Rocha</div><div class="depo__rl">Owner · Fornalha</div></div></div>
+      <div class="depo__who"><div class="depo__av"><img src="img/camila.jpg" alt="Sarah Bennett" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Sarah Bennett</div><div class="depo__rl">Owner · Ember</div></div></div>
     </div>
     <div class="depo__item rv rv-1">
       <p>They understood the bar better than I did. They kept the soul of the place and still made everything look better. Revenue doubled.</p>
-      <div class="depo__who"><div class="depo__av"><img src="img/jorge.jpg" alt="Jorge Menezes" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Jorge Menezes</div><div class="depo__rl">Partner · Boteco do Zé</div></div></div>
+      <div class="depo__who"><div class="depo__av"><img src="img/jorge.jpg" alt="Mike Sullivan" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Mike Sullivan</div><div class="depo__rl">Partner · Joe's Tavern</div></div></div>
     </div>
     <div class="depo__item rv">
       <p>The new menu changed what people order. The average check went up without us raising a single price. Pure design.</p>
-      <div class="depo__who"><div class="depo__av"><img src="img/leticia.jpg" alt="Letícia Amaral" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Letícia Amaral</div><div class="depo__rl">Chef · Verde Limão</div></div></div>
+      <div class="depo__who"><div class="depo__av"><img src="img/leticia.jpg" alt="Emily Carter" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Emily Carter</div><div class="depo__rl">Chef · Sage Kitchen</div></div></div>
     </div>
     <div class="depo__item rv rv-1">
       <p>We opened 3 locations with BRASA's brand and every one launches consistent. It's like having a branding partner.</p>
-      <div class="depo__who"><div class="depo__av"><img src="img/felipe.jpg" alt="Felipe Dias" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Felipe Dias</div><div class="depo__rl">Founder · Kaffa</div></div></div>
+      <div class="depo__who"><div class="depo__av"><img src="img/felipe.jpg" alt="David Chen" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">David Chen</div><div class="depo__rl">Founder · Daybreak</div></div></div>
     </div>
   </div>
 </section>
@@ -513,8 +522,21 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
 <!-- CTA -->
 <section class="cta" id="contato">
   <h2>Ready to<br>pack the house?</h2>
-  <a href="https://wa.me/5511987654321?text=Hi%20BRASA!%20I%20have%20a%20restaurant%20and%20I%27d%20like%20to%20talk%20about%20a%20brand%20project." class="cta__btn mag" target="_blank" rel="noopener">Message us on WhatsApp ↗</a>
-  <div class="cta__sub">hello@brasa.studio · (11) 98765-4321</div>
+  <form class="cta__form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="dc52a1b4-064c-413c-be04-ad656c9829a4">
+    <input type="hidden" name="subject" value="New lead from BRASA Studio website">
+    <input type="hidden" name="from_name" value="BRASA Studio">
+    <input type="text" name="botcheck" class="cta__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="cta__fields">
+      <input class="cta__in" type="text" name="name" placeholder="Your name" required>
+      <input class="cta__in" type="email" name="email" placeholder="Email address" required>
+      <input class="cta__in" type="text" name="restaurant" placeholder="Restaurant / project">
+      <textarea class="cta__in cta__ta" name="message" placeholder="Tell us about your place" required></textarea>
+    </div>
+    <button type="submit" class="cta__btn mag">Send message ↗</button>
+    <p class="cta__status" id="formStatus" aria-live="polite"></p>
+  </form>
+  <div class="cta__sub">hello@brasa.studio · (213) 908-4200</div>
 </section>
 
 <!-- FOOTER -->
@@ -522,7 +544,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
   <div class="footer__grid">
     <div>
       <div class="footer__logo"><b></b>BRASA</div>
-      <div class="footer__addr">Rua Aspicuelta, 232<br>Vila Madalena · São Paulo, SP<br>Since 2017</div>
+      <div class="footer__addr">800 Traction Ave, Suite 300<br>Arts District · Los Angeles, CA 90013<br>Since 2017</div>
     </div>
     <div class="footer__col">
       <h4>Navigation</h4>
@@ -540,7 +562,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
     <div class="footer__col">
       <h4>Talk to us</h4>
       <a href="mailto:hello@brasa.studio" class="mag">hello@brasa.studio</a>
-      <a href="tel:+5511987654321" class="mag">(11) 98765-4321</a>
+      <a href="tel:+12139084200" class="mag">(213) 908-4200</a>
     </div>
   </div>
   <div class="footer__bot">
@@ -549,8 +571,8 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-of
   </div>
 </footer>
 
-<a href="https://wa.me/5511987654321?text=Hi%20BRASA!" class="wpp mag" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="#contato" class="fab mag" aria-label="Contact us">
+  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
 </a>
 
 <script>
@@ -613,6 +635,20 @@ setSvcHeight();horiz();
 const mb=document.getElementById('menuBtn'),nl=document.getElementById('navLinks');
 mb.addEventListener('click',()=>{const o=nl.classList.toggle('open');mb.textContent=o?'Close':'Menu'});
 nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');mb.textContent='Menu'}));
+
+const form=document.getElementById('contactForm'),status=document.getElementById('formStatus');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=form.querySelector('button[type=submit]');
+  status.style.color='';status.textContent='Sending…';btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    const data=await res.json();
+    if(res.ok){status.style.color='#181410';status.textContent='Thanks! We’ll be in touch soon.';form.reset()}
+    else{status.style.color='#181410';status.textContent=data.message||'Something went wrong. Try again.'}
+  }catch(err){status.style.color='#181410';status.textContent='Network error. Please email hello@brasa.studio.'}
+  btn.disabled=false;
+});
 </script>
 
 </body>
