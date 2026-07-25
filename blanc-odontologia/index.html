@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blanc Dental | Faria Lima, São Paulo</title>
+<meta name="description" content="High-end dental clinic on Faria Lima. Implants, dental veneers, facial harmonization and invisible orthodontics.">
+<meta name="theme-color" content="#0B1622">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%230B1622'/%3E%3Cpath d='M32 14c5 0 8 3.5 8 8.5 0 5.5-2.5 9-2.5 14.5s1.5 8.5-1.5 8.5-2.5-3-3-8c-.3-3-1.2-3-1.5 0-.5 5-.5 8-3 8s-1.5-3-1.5-8.5c0-5.5-2.5-9-2.5-14.5 0-5 3-8.5 8-8.5z' fill='%234AADDF' opacity='.85'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0B1622;
+  --ink-2: #12202F;
+  --ink-3: #1A2D40;
+  --slate: #2C3E50;
+  --mid: #5A7184;
+  --cool: #8899A6;
+  --pale: #B0BEC5;
+  --cloud: #E3EAF0;
+  --snow: #F4F7FA;
+  --white: #FFFFFF;
+  --blue: #4AADDF;
+  --blue-deep: #2E8BC0;
+  --blue-glow: rgba(74, 173, 223, 0.12);
+  --blue-soft: rgba(74, 173, 223, 0.06);
+  --serif: "DM Sans", system-ui, sans-serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --max: 1160px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--white);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.w { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ═══ REVEAL ═══ */
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.25, 1, 0.5, 1), transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.rv.on { opacity: 1; transform: none; }
+.rv-d1 { transition-delay: 0.07s; }
+.rv-d2 { transition-delay: 0.14s; }
+.rv-d3 { transition-delay: 0.21s; }
+.rv-d4 { transition-delay: 0.28s; }
+.rv-d5 { transition-delay: 0.35s; }
+
+/* ═══ NAV ═══ */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+.topbar.stuck {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--cloud);
+}
+.topbar-in {
+  max-width: var(--max); margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--serif); font-size: 1.25rem; color: var(--white);
+  letter-spacing: 0.5px;
+  transition: color 0.4s;
+}
+.topbar.stuck .logo { color: var(--ink); }
+.logo-dot { color: var(--blue); }
+
+.nav-list {
+  display: flex; align-items: center; gap: 32px; list-style: none;
+}
+.nav-list a {
+  font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.65);
+  letter-spacing: 0.3px; transition: color 0.3s; cursor: pointer;
+}
+.topbar.stuck .nav-list a { color: var(--mid); }
+.nav-list a:hover { color: var(--white); }
+.topbar.stuck .nav-list a:hover { color: var(--ink); }
+
+.nav-btn {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px;
+  background: var(--blue); color: var(--white) !important;
+  padding: 10px 24px; border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+.nav-btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
+
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 28px; height: 20px; position: relative; z-index: 200;
+}
+.hamburger span {
+  display: block; width: 100%; height: 2px; background: var(--white);
+  position: absolute; left: 0; transition: 0.3s;
+}
+.topbar.stuck .hamburger span { background: var(--ink); }
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { top: 18px; }
+.hamburger.open span:nth-child(1) { top: 9px; transform: rotate(45deg); background: var(--white); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); background: var(--white); }
+
+/* ═══ HERO (smooth scroll parallax) ═══ */
+.hero-scroll {
+  position: relative; width: 100%;
+  height: calc(1500px + 100vh);
+  background: var(--ink);
+}
+.hero-sticky {
+  position: sticky; top: 0;
+  width: 100%; height: 100vh; height: 100dvh;
+  overflow: hidden;
+  will-change: clip-path;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  overflow: hidden;
+}
+.hero-bg video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scale(1.7);
+  transform-origin: center;
+  will-change: transform;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11,22,34,0.6) 0%, rgba(11,22,34,0.3) 40%, rgba(11,22,34,0.5) 100%);
+  pointer-events: none;
+}
+.hero-content {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 80px 24px 48px;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+}
+.hero-tag::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--blue); opacity: 0.4;
+}
+.hero-content h1 {
+  font-family: var(--serif); font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  font-weight: 700; line-height: 1.08; color: var(--white);
+  margin-bottom: 24px; max-width: 700px;
+  opacity: 0; animation: fadeUp 0.8s 0.35s forwards;
+}
+.hero-content h1 i { font-style: italic; color: var(--blue); }
+.hero-p {
+  font-size: 1rem; line-height: 1.7; color: var(--cloud);
+  font-weight: 300; max-width: 480px; margin-bottom: 40px;
+  opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 14px; align-items: center;
+  opacity: 0; animation: fadeUp 0.8s 0.65s forwards;
+}
+.btn-main {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: var(--white);
+  padding: 14px 32px; border-radius: 8px;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.btn-main:hover {
+  background: var(--blue-deep); transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74,173,223,0.25);
+}
+.btn-main svg { width: 15px; height: 15px; transition: transform 0.3s; }
+.btn-main:hover svg { transform: translateX(3px); }
+.btn-sec {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: none; color: var(--pale);
+  padding: 14px 28px; border-radius: 8px;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.15); cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, transform 0.2s;
+}
+.btn-sec:hover { border-color: rgba(255,255,255,0.3); color: var(--white); transform: translateY(-2px); }
+
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ═══ SOBRE / DOUTOR (light) ═══ */
+.sobre {
+  padding: 120px 0;
+  background: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+.sobre-blur {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); pointer-events: none;
+  opacity: 0.35;
+}
+.sobre-blur-1 {
+  width: 400px; height: 400px;
+  background: var(--blue);
+  top: 10%; right: -5%;
+  animation: floatBlur1 8s ease-in-out infinite;
+}
+.sobre-blur-2 {
+  width: 300px; height: 300px;
+  background: var(--blue-deep);
+  bottom: 5%; left: -8%;
+  animation: floatBlur2 10s ease-in-out infinite;
+}
+.sobre-blur-3 {
+  width: 200px; height: 200px;
+  background: var(--blue);
+  top: 50%; left: 40%;
+  animation: floatBlur3 12s ease-in-out infinite;
+  opacity: 0.18;
+}
+@keyframes floatBlur1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 20px) scale(1.1); }
+  66% { transform: translate(15px, -15px) scale(0.95); }
+}
+@keyframes floatBlur2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -20px) scale(1.12); }
+}
+@keyframes floatBlur3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-20px, 15px) scale(1.15); }
+  70% { transform: translate(10px, -25px) scale(0.9); }
+}
+.sobre-grid {
+  display: grid; grid-template-columns: 0.85fr 1.15fr;
+  gap: 72px; align-items: center;
+}
+.sobre-img-wrap {
+  position: relative;
+}
+.sobre-img-wrap::before {
+  content: ''; position: absolute;
+  top: -16px; left: -16px; right: 16px; bottom: 16px;
+  border: 1px solid var(--blue);
+  border-radius: 18px; opacity: 0.2;
+  transform: translate(8px, 8px);
+  transition: transform 0.6s cubic-bezier(0.25,1,0.5,1), opacity 0.6s;
+}
+.sobre-img-wrap:hover::before {
+  transform: translate(12px, 12px); opacity: 0.35;
+}
+.sobre-img {
+  border-radius: 14px; overflow: hidden;
+  aspect-ratio: 3/4; position: relative;
+}
+.sobre-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25,1,0.5,1);
+}
+.sobre-img:hover img { transform: scale(1.04); }
+
+.sobre-badge {
+  position: absolute; bottom: -20px; right: -12px;
+  background: var(--ink); color: var(--white);
+  padding: 18px 24px; border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(11,22,34,0.2);
+  z-index: 3;
+}
+.sobre-badge strong {
+  font-family: var(--serif); font-size: 1.6rem;
+  display: block; line-height: 1; color: var(--blue);
+}
+.sobre-badge span {
+  font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--cool); margin-top: 4px; display: block;
+}
+
+/* scroll-triggered motion for doctor section */
+.dr-rv {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.25,1,0.5,1), transform 0.7s cubic-bezier(0.25,1,0.5,1);
+}
+.dr-rv.on { opacity: 1; transform: none; }
+.dr-rv-img {
+  opacity: 0; transform: translateX(-40px) scale(0.97);
+  transition: opacity 0.8s cubic-bezier(0.25,1,0.5,1), transform 0.8s cubic-bezier(0.25,1,0.5,1);
+}
+.dr-rv-img.on { opacity: 1; transform: none; }
+
+.lbl {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--blue);
+  margin-bottom: 16px; display: block;
+}
+.sobre-txt h2 {
+  font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+  font-weight: 700; line-height: 1.12; color: var(--ink);
+  margin-bottom: 24px;
+}
+.sobre-txt h2 i { font-style: italic; }
+.sobre-txt p {
+  font-size: 0.95rem; line-height: 1.8; color: var(--mid);
+  font-weight: 300; margin-bottom: 16px;
+}
+.creds {
+  margin-top: 36px; padding-top: 32px;
+  border-top: 1px solid var(--cloud);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.cred {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 0.88rem; color: var(--slate);
+  opacity: 0; transform: translateX(20px);
+  transition: opacity 0.5s cubic-bezier(0.25,1,0.5,1), transform 0.5s cubic-bezier(0.25,1,0.5,1);
+}
+.cred.on { opacity: 1; transform: none; }
+.cred-ico {
+  width: 40px; height: 40px; min-width: 40px;
+  background: var(--blue-glow); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.cred:hover .cred-ico { background: var(--blue); transform: scale(1.08); }
+.cred-ico svg { width: 17px; height: 17px; color: var(--blue); transition: color 0.3s; }
+.cred:hover .cred-ico svg { color: var(--white); }
+.cred strong { font-weight: 600; color: var(--ink); }
+
+/* ═══ SERVIÇOS (dark) ═══ */
+.servicos {
+  padding: 100px 0;
+  background: var(--ink);
+}
+.servicos .lbl { color: var(--blue); }
+.servicos-top {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 56px;
+}
+.servicos-top h2 {
+  font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700; line-height: 1.15; color: var(--white);
+  max-width: 400px;
+}
+.servicos-top h2 i { font-style: italic; color: var(--blue); }
+.servicos-top p {
+  font-size: 0.9rem; color: var(--cool); font-weight: 300;
+  max-width: 340px; line-height: 1.7; text-align: right;
+}
+
+.srv-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.srv {
+  background: var(--ink-2); border-radius: 16px;
+  overflow: hidden; position: relative;
+  cursor: default;
+  transition: transform 0.45s cubic-bezier(0.25,1,0.5,1), box-shadow 0.45s;
+}
+.srv:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.srv-img {
+  position: relative; overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.srv-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25,1,0.5,1);
+}
+.srv:hover .srv-img img { transform: scale(1.08); }
+.srv-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, var(--ink-2) 100%);
+  pointer-events: none;
+}
+.srv-body { padding: 24px 24px 28px; }
+.srv-n {
+  font-size: 0.65rem; font-weight: 600;
+  color: var(--blue); opacity: 0.5;
+  margin-bottom: 10px; display: block;
+  letter-spacing: 1px;
+}
+.srv h3 {
+  font-family: var(--serif); font-size: 1.05rem;
+  font-weight: 700; color: var(--white);
+  margin-bottom: 8px;
+}
+.srv p {
+  font-size: 0.78rem; line-height: 1.65; color: var(--cool);
+  font-weight: 300;
+}
+.srv-line {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px; background: var(--blue);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25,1,0.5,1);
+}
+.srv:hover .srv-line { transform: scaleX(1); }
+
+/* ═══ CLÍNICA (light + marquee) ═══ */
+.clinica {
+  padding: 100px 0 0;
+  background: var(--snow);
+  overflow: hidden;
+}
+.clinica-head {
+  margin-bottom: 48px; max-width: 560px;
+}
+.clinica-head h2 {
+  font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700; line-height: 1.15; color: var(--ink);
+  margin-bottom: 14px;
+}
+.clinica-head h2 i { font-style: italic; }
+.clinica-head p {
+  font-size: 0.95rem; line-height: 1.7; color: var(--mid); font-weight: 300;
+}
+
+.cli-marquee {
+  overflow: hidden;
+  padding-bottom: 100px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 4%, black 96%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+.cli-track {
+  display: flex; gap: 16px;
+  animation: clinicScroll 40s linear infinite;
+  width: max-content;
+}
+.cli-slide {
+  flex: 0 0 auto;
+  width: 420px; height: 300px;
+  border-radius: 14px; overflow: hidden;
+}
+.cli-slide img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+@keyframes clinicScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══ CTA (dark) ═══ */
+.cta-sec {
+  padding: 100px 0;
+  background: var(--ink);
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-sec::before {
+  content: ''; position: absolute;
+  top: -200px; left: 50%; transform: translateX(-50%);
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, var(--blue-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner {
+  position: relative; max-width: 560px; margin: 0 auto;
+}
+.cta-inner h2 {
+  font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700; color: var(--white); line-height: 1.15;
+  margin-bottom: 16px;
+}
+.cta-inner h2 i { font-style: italic; color: var(--blue); }
+.cta-inner p {
+  font-size: 0.95rem; color: var(--cool); line-height: 1.7;
+  font-weight: 300; margin-bottom: 36px;
+}
+.cta-row {
+  display: flex; gap: 16px; justify-content: center; align-items: center;
+  flex-wrap: wrap;
+}
+.cta-tel {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; color: var(--pale);
+}
+.cta-tel svg { width: 16px; height: 16px; color: var(--blue); }
+
+/* ═══ VISITA (map) ═══ */
+.visita {
+  padding: 64px 0;
+  background: var(--ink-2);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+.visita-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 48px; align-items: center;
+}
+.visita .lbl { color: var(--blue); }
+.visita h2 {
+  font-family: var(--serif); font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 700; color: var(--white); line-height: 1.2;
+  margin-bottom: 12px;
+}
+.visita h2 i { font-style: italic; color: var(--blue); }
+.visita-desc {
+  font-size: 0.82rem; color: var(--cool); line-height: 1.7;
+  font-weight: 300; margin-bottom: 28px; max-width: 360px;
+}
+.visita-items { display: flex; flex-direction: column; gap: 18px; }
+.visita-item {
+  display: flex; gap: 12px; align-items: center;
+}
+.visita-ico {
+  flex-shrink: 0; width: 36px; height: 36px;
+  border-radius: 10px; background: var(--ink-3);
+  display: flex; align-items: center; justify-content: center;
+}
+.visita-ico svg { width: 15px; height: 15px; color: var(--blue); }
+.visita-item p {
+  font-size: 0.78rem; color: var(--cool); line-height: 1.5; font-weight: 300;
+}
+.visita-item strong {
+  font-weight: 500; color: var(--pale);
+}
+.visita-map {
+  position: relative; border-radius: 16px; overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.visita-map iframe {
+  width: 100%; height: 100%; border: 0;
+}
+.visita-map::after {
+  content: ''; position: absolute; inset: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+.visita-hours {
+  margin-top: 24px; padding: 16px 20px; border-radius: 12px;
+  background: var(--ink-3);
+}
+.visita-hours h4 {
+  font-size: 0.65rem; font-weight: 600; color: var(--blue);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;
+}
+.visita-hours-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.visita-hours-row:last-child { border-bottom: none; }
+.visita-hours-day { font-size: 0.75rem; color: var(--cool); font-weight: 400; }
+.visita-hours-time { font-size: 0.75rem; color: var(--white); font-weight: 500; }
+.visita-hours-closed { color: var(--cool); opacity: 0.5; }
+
+@media (max-width: 1024px) {
+  .visita-grid { grid-template-columns: 1fr; gap: 32px; }
+  .visita-map { aspect-ratio: 16/9; }
+}
+@media (max-width: 768px) {
+  .visita { padding: 56px 0; }
+  .visita-map { border-radius: 12px; }
+}
+
+/* ═══ FOOTER ═══ */
+.foot {
+  background: var(--ink-2);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 64px 0 0;
+  color: var(--cool);
+}
+.foot-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 40px; margin-bottom: 48px;
+}
+.foot-brand {
+  font-family: var(--serif); font-size: 1.15rem; color: var(--white);
+  margin-bottom: 14px; display: block;
+}
+.foot-brand span { color: var(--blue); }
+.foot-desc {
+  font-size: 0.82rem; line-height: 1.7; font-weight: 300;
+  max-width: 280px;
+}
+.foot h4 {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue);
+  margin-bottom: 18px;
+}
+.foot-links { list-style: none; }
+.foot-links li { margin-bottom: 10px; }
+.foot-links a {
+  font-size: 0.82rem; font-weight: 300; transition: color 0.3s; cursor: pointer;
+}
+.foot-links a:hover { color: var(--white); }
+
+.foot-addr {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.foot-addr-item {
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.foot-addr-ico {
+  width: 28px; height: 28px; min-width: 28px;
+  background: rgba(74,173,223,0.08); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.foot-addr-ico svg { width: 13px; height: 13px; color: var(--blue); }
+.foot-addr-txt { font-size: 0.82rem; line-height: 1.6; font-weight: 300; }
+
+.foot-bar {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.72rem; font-weight: 300;
+}
+.foot-soc {
+  display: flex; gap: 8px;
+}
+.foot-soc a {
+  width: 32px; height: 32px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.3s, background 0.3s; cursor: pointer;
+}
+.foot-soc a:hover { border-color: var(--blue); background: var(--blue-soft); }
+.foot-soc svg { width: 14px; height: 14px; }
+
+/* ═══ WA ═══ */
+.wa {
+  position: fixed; bottom: 24px; right: 24px; z-index: 90;
+  width: 52px; height: 52px; background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.3);
+  transition: transform 0.3s; cursor: pointer;
+  opacity: 0; animation: fadeUp 0.6s 1.5s forwards;
+}
+.wa:hover { transform: scale(1.08); }
+.wa svg { width: 24px; height: 24px; color: #fff; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1024px) {
+  .hero-scroll { height: calc(1000px + 100vh); }
+  .hero-content h1 { font-size: 2.4rem; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
+  .sobre-img-wrap::before { display: none; }
+  .sobre-badge { right: 16px; bottom: -16px; }
+  .srv-grid { grid-template-columns: 1fr 1fr; }
+  .servicos-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .servicos-top p { text-align: left; }
+  .cli-slide { width: 360px; height: 260px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-list { display: none; }
+  .nav-list.open {
+    display: flex; flex-direction: column;
+    position: fixed; inset: 0; background: var(--ink);
+    justify-content: center; align-items: center;
+    gap: 24px; z-index: 150;
+  }
+  .nav-list.open a { font-size: 1rem; color: var(--white) !important; }
+  .hamburger { display: block; }
+
+  .hero-scroll { height: calc(800px + 100vh); }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .btn-main, .btn-sec { justify-content: center; }
+  .hero-nums { gap: 28px; }
+  .hero-num strong { font-size: 1.5rem; }
+
+  .sobre-img { aspect-ratio: 3/4; max-height: 500px; }
+
+  .srv-grid { grid-template-columns: 1fr; }
+  .cli-slide { width: 280px; height: 200px; }
+
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+  .foot-bar { flex-direction: column; gap: 12px; text-align: center; }
+  .cta-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a href="#" class="logo">Blanc<span class="logo-dot">.</span></a>
+    <ul class="nav-list" id="navList">
+      <li><a href="#sobre">About</a></li>
+      <li><a href="#servicos">Services</a></li>
+      <li><a href="#clinica">Clinic</a></li>
+      <li><a href="#contato" class="nav-btn">Book now</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO (smooth scroll parallax) -->
+<section class="hero-scroll" id="hero-scroll">
+  <div class="hero-sticky" id="hero-sticky">
+    <div class="hero-bg" id="hero-bg">
+      <video autoplay muted loop playsinline>
+        <source src="img/Video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Faria Lima, São Paulo</div>
+      <h1>The aesthetics of your smile start <i>here</i></h1>
+      <p class="hero-p">3D technology, next-generation materials and a careful eye for every detail. Dentistry that blends science and art.</p>
+      <div class="hero-ctas">
+        <a href="#contato" class="btn-main">
+          Book an evaluation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#servicos" class="btn-sec">Our services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOUTOR -->
+<section class="sobre" id="sobre">
+  <div class="sobre-blur sobre-blur-1"></div>
+  <div class="sobre-blur sobre-blur-2"></div>
+  <div class="sobre-blur sobre-blur-3"></div>
+  <div class="w" style="position:relative;z-index:1">
+    <div class="sobre-grid">
+      <div class="sobre-img-wrap dr-rv-img">
+        <div class="sobre-img">
+          <img src="img/doutor.jpg" alt="Dr. Rafael Blanc" loading="lazy" width="480" height="640">
+        </div>
+        <div class="sobre-badge dr-rv" style="transition-delay:0.3s">
+          <strong>15+</strong>
+          <span>Years of experience</span>
+        </div>
+      </div>
+      <div class="sobre-txt dr-rv" style="transition-delay:0.15s">
+        <span class="lbl">Dr. Rafael Blanc</span>
+        <h2>Technical precision.<br><i>Artistic eye.</i></h2>
+        <p>Dr. Rafael Blanc is a reference in aesthetic dentistry and oral rehabilitation. Trained at USP with a specialization in advanced dental aesthetics, he handles every case with scientific rigor and sensitivity.</p>
+        <p>His clinic on Faria Lima was designed to offer a distinctive experience, from digital diagnosis to the final result.</p>
+        <div class="creds">
+          <div class="cred">
+            <div class="cred-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+            </div>
+            <span><strong>USP</strong> · Bachelor's and Master's</span>
+          </div>
+          <div class="cred">
+            <div class="cred-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="9" r="6"/></svg>
+            </div>
+            <span><strong>CRO-SP 98.542</strong> · Dental Prosthetics</span>
+          </div>
+          <div class="cred">
+            <div class="cred-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <span><strong>NYU</strong> · Digital Implantology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLÍNICA -->
+<section class="clinica" id="clinica">
+  <div class="w">
+    <div class="clinica-head rv">
+      <span class="lbl">The clinic</span>
+      <h2>A space designed for your <i>comfort</i></h2>
+      <p>Every detail of Blanc Dental was designed to blend cutting-edge technology with a welcoming, sophisticated environment.</p>
+    </div>
+  </div>
+  <div class="cli-marquee">
+    <div class="cli-track">
+      <div class="cli-slide"><img src="img/consultorio1.jpg" alt="Reception" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio2.jpg" alt="Treatment room" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio3.jpg" alt="Photo studio" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio4.png" alt="Planning" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio5.jpg" alt="Main office" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio1.jpg" alt="Reception" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio2.jpg" alt="Treatment room" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio3.jpg" alt="Photo studio" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio4.png" alt="Planning" loading="lazy"></div>
+      <div class="cli-slide"><img src="img/consultorio5.jpg" alt="Main office" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="w">
+    <div class="servicos-top rv">
+      <div>
+        <span class="lbl">Specialties</span>
+        <h2>Treatments with <i>excellence</i></h2>
+      </div>
+      <p>Every procedure is planned digitally and performed with next-generation materials.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv rv rv-d1">
+        <div class="srv-img"><img src="img/implante.jpg" alt="Digital implants" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">01</span>
+          <h3>Digital implants</h3>
+          <p>Computer-guided surgery with 3D planning for millimeter precision and faster recovery.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+      <div class="srv rv rv-d2">
+        <div class="srv-img"><img src="img/lentes.jpg" alt="Porcelain veneers" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">02</span>
+          <h3>Porcelain veneers</h3>
+          <p>Ultra-thin porcelain veneers with custom digital design for a natural smile.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+      <div class="srv rv rv-d3">
+        <div class="srv-img"><img src="img/harmonização.jpg" alt="Facial harmonization" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">03</span>
+          <h3>Facial harmonization</h3>
+          <p>Botulinum toxin, hyaluronic acid and biostimulators to enhance your natural beauty.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+      <div class="srv rv rv-d4">
+        <div class="srv-img"><img src="img/ortodontia.jpg" alt="Invisible orthodontics" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">04</span>
+          <h3>Invisible orthodontics</h3>
+          <p>Clear aligners with digital scanning for discreet smile correction.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+      <div class="srv rv rv-d5">
+        <div class="srv-img"><img src="img/clareamento.jpg" alt="Teeth whitening" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">05</span>
+          <h3>Teeth whitening</h3>
+          <p>LED technology for safe teeth whitening with visible results in a single session.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+      <div class="srv rv">
+        <div class="srv-img"><img src="img/endodontia.jpg" alt="Endodontics" loading="lazy"></div>
+        <div class="srv-body">
+          <span class="srv-n">06</span>
+          <h3>Endodontics</h3>
+          <p>Root canal treatment with operating microscopy and apex locator for pain-free procedures.</p>
+        </div>
+        <div class="srv-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contato">
+  <div class="w">
+    <div class="cta-inner rv">
+      <span class="lbl" style="justify-content:center;display:flex">Book now</span>
+      <h2>Ready for your new <i>smile</i>?</h2>
+      <p>Book your evaluation with no obligation. Dr. Rafael Blanc will create an exclusive digital plan just for you.</p>
+      <div class="cta-row">
+        <a href="#" class="btn-main">
+          Book an appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="cta-tel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (11) 3042-8800
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISITA -->
+<section class="visita" id="visita">
+  <div class="w">
+    <div class="visita-grid">
+      <div class="visita-info rv">
+        <span class="lbl">Location</span>
+        <h2>Come <i>visit</i> us</h2>
+        <p class="visita-desc">We're in the heart of Faria Lima, with easy access by subway, bus and on-site parking in the building.</p>
+
+        <div class="visita-items">
+          <div class="visita-item">
+            <div class="visita-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <p><strong>Av. Brig. Faria Lima, 3477</strong><br>South Tower, 22nd floor · Suite 2208 · Itaim Bibi, SP</p>
+          </div>
+          <div class="visita-item">
+            <div class="visita-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <p><strong>(11) 3042-8800</strong></p>
+          </div>
+          <div class="visita-item">
+            <div class="visita-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <p><strong>contato@blancodonto.com.br</strong></p>
+          </div>
+        </div>
+
+        <div class="visita-hours">
+          <h4>Business hours</h4>
+          <div class="visita-hours-row"><span class="visita-hours-day">Monday to Friday</span><span class="visita-hours-time">8am to 7pm</span></div>
+          <div class="visita-hours-row"><span class="visita-hours-day">Saturday</span><span class="visita-hours-time">9am to 2pm</span></div>
+          <div class="visita-hours-row"><span class="visita-hours-day">Sunday</span><span class="visita-hours-time visita-hours-closed">Closed</span></div>
+        </div>
+      </div>
+      <div class="visita-map rv rv-d2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8!2d-46.6916!3d-23.5827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f1068b21b7%3A0x4e6a246a7db3625c!2sAv.%20Brig.%20Faria%20Lima%2C%203477%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="w">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-brand">Blanc<span>.</span></span>
+        <p class="foot-desc">High-end dentistry with digital technology and personalized care on Av. Faria Lima.</p>
+      </div>
+      <div>
+        <h4>Specialties</h4>
+        <ul class="foot-links">
+          <li><a href="#">Digital implants</a></li>
+          <li><a href="#">Porcelain veneers</a></li>
+          <li><a href="#">Facial harmonization</a></li>
+          <li><a href="#">Invisible orthodontics</a></li>
+          <li><a href="#">Teeth whitening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul class="foot-links">
+          <li><a href="#">About Dr. Blanc</a></li>
+          <li><a href="#">Facilities</a></li>
+          <li><a href="#">Results</a></li>
+          <li><a href="#">Insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="foot-addr">
+          <div class="foot-addr-item">
+            <div class="foot-addr-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="foot-addr-txt">Av. Brig. Faria Lima, 3477<br>South Tower, 22nd floor · Suite 2208<br>Itaim Bibi · São Paulo, SP</div>
+          </div>
+          <div class="foot-addr-item">
+            <div class="foot-addr-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="foot-addr-txt">(11) 3042-8800<br>contato@blancodonto.com.br</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2025 Blanc Dental. CRO-SP CL 22.481</span>
+      <div class="foot-soc">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2c.312-1.732.466-3.49.46-5.25a29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WA -->
+<a href="#" class="wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const tb = document.getElementById('topbar');
+window.addEventListener('scroll', () => tb.classList.toggle('stuck', scrollY > 40), {passive:true});
+
+const ham = document.getElementById('ham'), nl = document.getElementById('navList');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open'); nl.classList.toggle('open');
+  document.body.style.overflow = nl.classList.contains('open') ? 'hidden' : '';
+});
+nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  ham.classList.remove('open'); nl.classList.remove('open');
+  document.body.style.overflow = '';
+}));
+
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }});
+}, {threshold: 0.08, rootMargin: '0px 0px -20px 0px'});
+document.querySelectorAll('.rv, .dr-rv, .dr-rv-img').forEach(el => io.observe(el));
+
+// Stagger credential items when sobre section enters view
+const credsObs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.cred').forEach((c, i) => {
+        setTimeout(() => c.classList.add('on'), 400 + i * 120);
+      });
+      credsObs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.2});
+const credsEl = document.querySelector('.creds');
+if (credsEl) credsObs.observe(credsEl);
+
+// Smooth scroll hero clip-path parallax
+(function() {
+  const heroScroll = document.getElementById('hero-scroll');
+  const heroSticky = document.getElementById('hero-sticky');
+  const heroBg = document.getElementById('hero-bg');
+  if (!heroScroll || !heroSticky || !heroBg) return;
+
+  const INIT_CLIP = 20;
+  const FINAL_CLIP = 0;
+
+  function lerp(a, b, t) { return a + (b - a) * Math.min(1, Math.max(0, t)); }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const rect = heroScroll.getBoundingClientRect();
+      const scrollable = heroScroll.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const progress = Math.min(1, Math.max(0, scrolled / scrollable));
+
+      const clipStart = lerp(INIT_CLIP, FINAL_CLIP, progress);
+      const clipEnd = lerp(100 - INIT_CLIP, 100, progress);
+      heroSticky.style.clipPath = `polygon(${clipStart}% ${clipStart}%, ${clipEnd}% ${clipStart}%, ${clipEnd}% ${clipEnd}%, ${clipStart}% ${clipEnd}%)`;
+
+      const scale = lerp(1.7, 1, progress);
+      const vid = heroBg.querySelector('video');
+      if (vid) vid.style.transform = 'scale(' + scale + ')';
+
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

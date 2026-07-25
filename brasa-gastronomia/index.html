@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRASA · Branding studio for restaurants, cafes and bars</title>
+<meta name="description" content="A branding and web studio for food only. Identity, menu, packaging and digital presence for restaurants that want to pack the house. 80+ food brands since 2017.">
+<meta name="theme-color" content="#f3efe7">
+<meta name="author" content="BRASA Studio">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BRASA Studio">
+<meta property="og:title" content="BRASA · Branding for people who work with food">
+<meta property="og:description" content="Identity, menu, packaging and website for restaurants, cafes and bars. 80+ food brands since 2017.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181410'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23e8442a'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"BRASA Studio",
+  "description":"A branding and web studio specialized in food: restaurants, cafes and bars.",
+  "areaServed":"Brazil",
+  "slogan":"A brand hungry to fill every table.",
+  "email":"ola@brasa.studio",
+  "telephone":"+5511987654321",
+  "address":{"@type":"PostalAddress","streetAddress":"Rua Aspicuelta, 232, Vila Madalena","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},
+  "sameAs":["https://instagram.com/brasa.studio"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --papel:#f3efe7;
+  --tinta:#181410;
+  --tinta-70:#181410b3;
+  --tinta-40:#6b655d;
+  --brasa:#e8442a;
+  --dourado:#d99a2b;
+  --linha:#181410;
+  --ff-d:'Bricolage Grotesque',-apple-system,sans-serif;
+  --ff-m:'JetBrains Mono',ui-monospace,monospace;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-d);background:var(--papel);color:var(--tinta);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none}
+@media(hover:none){body{cursor:auto}}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:none;border:none;font-family:inherit;background:none}
+::selection{background:var(--brasa);color:var(--papel)}
+a:focus-visible,button:focus-visible{outline:2.5px solid var(--brasa);outline-offset:4px;border-radius:3px}
+.svc a:focus-visible,.footer a:focus-visible,.cta a:focus-visible{outline-color:var(--papel)}
+
+.grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
+
+.cur,.cur-dot{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;mix-blend-mode:difference}
+.cur{width:38px;height:38px;border:1.5px solid #fff;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+.cur-dot{width:5px;height:5px;background:#fff;transform:translate(-50%,-50%)}
+.cur.grow{width:74px;height:74px;background:#fff;border-color:#fff}
+@media(hover:none){.cur,.cur-dot{display:none}}
+
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--brasa);z-index:200}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 2.2rem;mix-blend-mode:difference;color:#fff}
+.nav__logo{font-weight:800;font-size:1.35rem;letter-spacing:.02em;display:flex;align-items:center;gap:.55rem}
+.nav__logo b{width:11px;height:11px;background:var(--brasa);border-radius:50%;display:inline-block}
+.nav__links{display:flex;gap:2rem;align-items:center;font-family:var(--ff-m);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.nav__links a{position:relative;overflow:hidden;height:1.1em;display:inline-block}
+.nav__links a span{display:block;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+.nav__links a span::after{content:attr(data-t);position:absolute;left:0;top:100%}
+.nav__links a:hover span{transform:translateY(-100%)}
+.menu-btn{display:none;font-family:var(--ff-m);font-size:.78rem;text-transform:uppercase;color:#fff}
+
+/* HERO */
+.hero{min-height:100vh;padding:8rem 2.2rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.hero__top{font-family:var(--ff-m);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--tinta-70);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1.5px solid var(--linha);padding-top:1rem}
+.hero__top b{color:var(--brasa)}
+.hero__mid{flex:1;display:flex;align-items:center}
+.hero__title{font-size:clamp(2.9rem,12.5vw,11.5rem);font-weight:700;line-height:.88;letter-spacing:-.04em;text-transform:uppercase}
+.hero__title .ln{display:block;overflow:hidden}
+.hero__title .ln i{display:inline-block;font-style:normal;transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.hero.in .ln:nth-child(1) i{transition-delay:.08s}
+.hero.in .ln:nth-child(2) i{transition-delay:.2s}
+.hero.in .ln:nth-child(3) i{transition-delay:.32s}
+.hero.in .ln i{transform:translateY(0)}
+.hero__title .out{-webkit-text-stroke:1.6px var(--tinta);color:transparent}
+.hero__title .red{color:var(--brasa)}
+.hero__bottom{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;border-bottom:1.5px solid var(--linha);padding-bottom:1.2rem}
+.hero__desc{max-width:400px;font-size:1.05rem;color:var(--tinta-70);line-height:1.45}
+.hero__cta{font-family:var(--ff-m);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;display:inline-flex;align-items:center;gap:.7rem;background:var(--tinta);color:var(--papel);padding:1.1rem 1.8rem;border-radius:60px;transition:background .3s;white-space:nowrap}
+.hero__cta:hover{background:var(--brasa)}
+.hero__cta b{width:8px;height:8px;background:var(--brasa);border-radius:50%;transition:background .3s}
+.hero__cta:hover b{background:var(--papel)}
+
+/* MARQUEE */
+.marquee{border-top:1.5px solid var(--linha);border-bottom:1.5px solid var(--linha);overflow:hidden;background:var(--tinta);color:var(--papel);white-space:nowrap;padding:.9rem 0}
+.marquee--red{background:var(--brasa);color:var(--papel);border-color:var(--brasa)}
+.marquee__track{display:inline-flex;gap:2.5rem;animation:scroll-x 30s linear infinite;will-change:transform}
+.marquee--red .marquee__track{animation-duration:22s;animation-direction:reverse}
+.marquee__track span{font-family:var(--ff-d);font-size:1.8rem;font-weight:600;text-transform:uppercase;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:2.5rem}
+.marquee__track span::after{content:'✳';color:var(--brasa);font-size:1.1rem}
+.marquee--red .marquee__track span::after{color:var(--tinta)}
+@keyframes scroll-x{to{transform:translateX(-50%)}}
+
+.sec-label{font-family:var(--ff-m);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brasa);display:flex;align-items:center;gap:.6rem}
+.sec-label::before{content:'';width:34px;height:1.5px;background:var(--brasa)}
+
+/* SOBRE */
+.sobre{padding:7rem 2.2rem;display:grid;grid-template-columns:1fr 1.25fr;gap:4rem;align-items:start}
+.sobre__big{font-size:clamp(1.8rem,4vw,3.3rem);font-weight:600;line-height:1.08;letter-spacing:-.025em;margin-top:2rem}
+.sobre__big .m{color:var(--tinta-40)}
+.sobre__side{padding-top:1rem}
+.sobre__side p{color:var(--tinta-70);font-size:1.05rem;margin-bottom:1.5rem;line-height:1.55}
+.sobre__stats{display:flex;gap:3rem;margin-top:2.5rem;flex-wrap:wrap}
+.stat__n{font-size:3.4rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.stat__l{font-family:var(--ff-m);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--tinta-40);margin-top:.4rem;max-width:150px}
+
+/* CASES */
+.cases{padding:6rem 2.2rem 7rem}
+.cases__head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+.cases__head h2{font-size:clamp(2rem,5vw,4rem);font-weight:700;letter-spacing:-.03em;text-transform:uppercase;line-height:.95}
+.cases__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.case{border:1.5px solid var(--linha);border-radius:10px;overflow:hidden;background:var(--papel);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.case:hover{transform:translateY(-6px)}
+.case__vis{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.case__mark{font-weight:800;letter-spacing:-.03em;text-align:center;line-height:.9;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.case:hover .case__mark{transform:scale(1.06)}
+.case__mark small{display:block;font-family:var(--ff-m);font-size:.6rem;font-weight:500;letter-spacing:.3em;margin-top:.6rem;opacity:.7}
+.case__tag{position:absolute;top:1rem;left:1rem;font-family:var(--ff-m);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;background:#00000022;backdrop-filter:blur(4px);padding:.35rem .7rem;border-radius:40px}
+.case__info{padding:1.5rem 1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1.5px solid var(--linha)}
+.case__name{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
+.case__name span{display:block;font-family:var(--ff-m);font-size:.72rem;font-weight:400;color:var(--tinta-40);text-transform:uppercase;letter-spacing:.03em;margin-top:.15rem}
+.case__metric{text-align:right;white-space:nowrap}
+.case__metric b{font-size:1.6rem;font-weight:700;color:var(--brasa);letter-spacing:-.02em;display:block;line-height:1}
+.case__metric small{font-family:var(--ff-m);font-size:.66rem;text-transform:uppercase;color:var(--tinta-40)}
+/* tons de marca por case */
+.v-fornalha{background:#1f2d22;color:#f0e6cf}
+.v-fornalha .case__mark small{color:#c98a3a}
+.v-limao{background:#dfe7b8;color:#2f3d17}
+.v-boteco{background:#7a1f16;color:#f3d9a6}
+.v-kaffa{background:#e8ddcb;color:#3a2a1c}
+.v-kaffa .case__mark small{color:#a9743f}
+
+/* SERVIÇOS horizontal */
+.svc{position:relative;background:var(--tinta);color:var(--papel)}
+.svc__pin{height:100vh;position:sticky;top:0;display:flex;align-items:center;overflow:hidden}
+.svc__track{display:flex;gap:1.6rem;padding:0 2.2rem;will-change:transform}
+.svc__intro{flex:0 0 min(80vw,520px);display:flex;flex-direction:column;justify-content:center}
+.svc__intro h2{font-size:clamp(2.2rem,4.8vw,4.2rem);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-top:1.4rem;text-transform:uppercase}
+.svc__intro p{color:#f3efe780;font-family:var(--ff-m);font-size:.85rem;margin-top:1.4rem;max-width:340px}
+.card{flex:0 0 min(78vw,380px);border:1.5px solid #f3efe733;border-radius:8px;padding:2.3rem;display:flex;flex-direction:column;justify-content:space-between;min-height:62vh;transition:background .35s,border-color .35s;position:relative;overflow:hidden}
+.card:hover{background:var(--brasa);border-color:var(--brasa)}
+.card__num{font-family:var(--ff-m);font-size:.8rem;color:#f3efe780}
+.card:hover .card__num{color:var(--papel)}
+.card__body{margin-top:auto}
+.card__t{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1;margin-bottom:1rem;text-transform:uppercase}
+.card__d{font-size:.96rem;color:#f3efe6b3;line-height:1.5}
+.card:hover .card__d{color:var(--papel)}
+.card__arrow{font-size:2rem;align-self:flex-end;margin-top:1.5rem;transition:transform .35s}
+.card:hover .card__arrow{transform:translate(6px,-6px)}
+
+/* LOGOS */
+.logos{padding:4.5rem 2.2rem;border-bottom:1.5px solid var(--linha)}
+.logos__label{font-family:var(--ff-m);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--tinta-40);text-align:center;margin-bottom:2.5rem}
+.logos__row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.5rem 3.5rem}
+.logos__row span{font-weight:700;font-size:1.5rem;letter-spacing:-.02em;color:var(--tinta);opacity:.55;transition:opacity .3s}
+.logos__row span:hover{opacity:1;color:var(--brasa)}
+
+/* PROCESSO */
+.proc{padding:7rem 2.2rem}
+.proc__head{max-width:640px;margin-bottom:3.5rem}
+.proc__head h2{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:700;letter-spacing:-.03em;text-transform:uppercase;line-height:.95;margin-top:1.2rem}
+.proc__step{display:grid;grid-template-columns:80px 1fr 1.4fr;gap:2rem;padding:2rem 0;border-top:1.5px solid var(--linha);align-items:baseline}
+.proc__step:last-child{border-bottom:1.5px solid var(--linha)}
+.proc__n{font-family:var(--ff-m);font-size:.9rem;color:var(--brasa)}
+.proc__t{font-size:1.7rem;font-weight:700;letter-spacing:-.02em}
+.proc__d{color:var(--tinta-70);font-size:1rem;line-height:1.5}
+
+/* TIME */
+.time{padding:5rem 2.2rem 7rem}
+.time__head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+.time__head h2{font-size:clamp(2rem,5vw,4rem);font-weight:700;letter-spacing:-.03em;text-transform:uppercase;line-height:.95}
+.time__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.member{border:1.5px solid var(--linha);border-radius:10px;padding:1.5rem;transition:background .35s}
+.member:hover{background:var(--tinta);color:var(--papel)}
+.member__av{aspect-ratio:1;border-radius:8px;overflow:hidden;margin-bottom:1.2rem;background:#d9d2c4}
+.member__av img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .45s,transform .6s cubic-bezier(.16,1,.3,1)}
+.member:hover .member__av img{filter:grayscale(0);transform:scale(1.04)}
+.member__nm{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.member__rl{font-family:var(--ff-m);font-size:.72rem;text-transform:uppercase;color:var(--tinta-40);margin-top:.2rem}
+.member:hover .member__rl{color:#f3efe780}
+
+/* DEPOIMENTOS */
+.depo{padding:0 2.2rem 7rem}
+.depo__head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;border-bottom:1.5px solid var(--linha);padding-bottom:1.5rem;margin-bottom:0}
+.depo__head h2{font-size:clamp(2rem,5vw,4rem);font-weight:700;letter-spacing:-.03em;text-transform:uppercase;line-height:.95}
+.depo__grid{display:grid;grid-template-columns:repeat(2,1fr)}
+.depo__item{padding:3rem 2rem;border-bottom:1.5px solid var(--linha)}
+.depo__item:nth-child(odd){border-right:1.5px solid var(--linha)}
+.depo__item p{font-size:1.3rem;font-weight:500;line-height:1.35;letter-spacing:-.015em;margin-bottom:2rem}
+.depo__item p::before{content:'“';color:var(--brasa)}
+.depo__who{display:flex;align-items:center;gap:.9rem}
+.depo__av{width:48px;height:48px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:#d9d2c4}
+.depo__av img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .45s}
+.depo__item:hover .depo__av img{filter:grayscale(0)}
+.depo__nm{font-weight:600;font-size:.95rem}
+.depo__rl{font-family:var(--ff-m);font-size:.72rem;color:var(--tinta-40);text-transform:uppercase}
+
+/* CTA */
+.cta{background:var(--brasa);color:var(--papel);padding:8rem 2.2rem;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(2.6rem,9vw,8rem);font-weight:800;line-height:.9;letter-spacing:-.04em;text-transform:uppercase}
+.cta__btn{margin-top:2.5rem;display:inline-flex;align-items:center;gap:.8rem;background:var(--papel);color:var(--tinta);padding:1.3rem 2.6rem;border-radius:60px;font-family:var(--ff-m);font-size:.9rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;transition:transform .25s,background .3s,color .3s}
+.cta__btn:hover{background:var(--tinta);color:var(--papel)}
+.cta__sub{font-family:var(--ff-m);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;margin-top:1.8rem;opacity:.85}
+
+/* FOOTER */
+.footer{background:var(--tinta);color:var(--papel);padding:4rem 2.2rem 2rem}
+.footer__grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid #f3efe733}
+.footer__logo{font-weight:800;font-size:2.6rem;letter-spacing:.01em;display:flex;align-items:center;gap:.6rem}
+.footer__logo b{width:16px;height:16px;background:var(--brasa);border-radius:50%}
+.footer__addr{font-family:var(--ff-m);font-size:.78rem;color:#f3efe680;margin-top:1rem;line-height:1.7;max-width:230px;text-transform:uppercase}
+.footer__col h4{font-family:var(--ff-m);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#f3efe680;margin-bottom:1rem}
+.footer__col a{display:block;font-size:1rem;margin-bottom:.6rem;color:#f3efe6cc;transition:color .3s}
+.footer__col a:hover{color:var(--brasa)}
+.footer__bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;font-family:var(--ff-m);font-size:.72rem;text-transform:uppercase;color:#f3efe680}
+
+.wpp{position:fixed;bottom:1.6rem;right:1.6rem;z-index:120;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px #25d36659;transition:transform .3s}
+.wpp:hover{transform:scale(1.1)}
+.wpp svg{width:28px;height:28px;fill:#fff}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:none}
+.rv-1{transition-delay:.08s}.rv-2{transition-delay:.16s}.rv-3{transition-delay:.24s}
+
+/* respeita quem pediu menos movimento no sistema */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  body{cursor:auto}
+  .cur,.cur-dot,.progress{display:none!important}
+  .rv{opacity:1!important;transform:none!important}
+  .hero__title .ln i{transform:none!important}
+  .marquee__track{animation:none!important;transform:none!important}
+  .svc__pin{height:auto!important;position:static!important;padding:5rem 0}
+  .svc__track{flex-direction:column;transform:none!important;padding:0 2.2rem;gap:1.6rem}
+  .svc__intro,.card{flex:auto;min-height:auto}
+}
+
+@media(max-width:860px){
+  body{cursor:auto}
+  .nav__links{position:fixed;inset:0;background:var(--tinta);flex-direction:column;justify-content:center;font-size:1.6rem;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);mix-blend-mode:normal;color:var(--papel);z-index:160}
+  .nav__links.open{transform:translateY(0)}
+  .nav__links a{height:auto}
+  .menu-btn{display:block;position:relative;z-index:170}
+  .sobre{grid-template-columns:1fr;gap:2rem;padding:5rem 1.4rem}
+  /* HERO mobile — composição própria, não desktop encolhido */
+  .hero{padding:6.5rem 1.4rem 2.2rem;min-height:100svh}
+  .hero__top{flex-direction:column;gap:.35rem;font-size:.72rem;padding-top:.9rem}
+  .hero__mid{align-items:flex-start;padding:1.5rem 0}
+  .hero__title{font-size:clamp(3.4rem,17vw,6rem);line-height:.9}
+  .hero__title .out{-webkit-text-stroke:1px var(--tinta)}
+  .hero__bottom{flex-direction:column;align-items:stretch;gap:1.6rem;padding-bottom:1.4rem}
+  .hero__desc{max-width:none;font-size:1.02rem}
+  .hero__cta{justify-content:center;width:100%;padding:1.25rem 1.8rem;font-size:.86rem}
+  /* títulos de seção maiores e mais presentes no mobile */
+  .sobre__big{font-size:clamp(2.2rem,8.5vw,3rem)}
+  .cases__head h2,.depo__head h2,.time__head h2{font-size:clamp(2.6rem,11vw,3.6rem)}
+  .svc__intro h2{font-size:clamp(2.8rem,12vw,3.8rem)}
+  .proc__head h2{font-size:clamp(2.4rem,9.5vw,3.2rem)}
+  .proc__t{font-size:1.9rem}
+  .sec-label{font-size:.8rem}
+  .cases{padding:5rem 1.4rem}
+  .cases__grid{grid-template-columns:1fr}
+  .svc__pin{height:auto;position:static;padding:5rem 0}
+  .svc__track{flex-direction:column;transform:none!important;padding:0 1.4rem}
+  .svc__intro,.card{flex:auto;min-height:auto}
+  .card{padding:2rem}
+  .proc{padding:5rem 1.4rem}
+  .proc__step{grid-template-columns:1fr;gap:.6rem}
+  .time{padding:4rem 1.4rem 5rem}
+  .time__grid{grid-template-columns:repeat(2,1fr)}
+  .depo{padding:0 1.4rem 5rem}
+  .depo__grid{grid-template-columns:1fr}
+  .depo__item{padding:2.2rem 1.4rem}
+  .depo__item:nth-child(odd){border-right:none}
+  .cta{padding:5rem 1.4rem}
+  .logos{padding:3.5rem 1.4rem}
+  .logos__row{gap:1.6rem 2.2rem}
+  .logos__row span{font-size:1.2rem}
+  .footer{padding:3rem 1.4rem 2rem}
+  .marquee__track span{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+<div class="cur" id="cur"></div>
+<div class="cur-dot" id="curDot"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav__logo"><b></b>BRASA</a>
+  <div class="nav__links" id="navLinks">
+    <a href="#cases" class="mag"><span data-t="Work">Work</span></a>
+    <a href="#estudio" class="mag"><span data-t="Studio">Studio</span></a>
+    <a href="#servicos" class="mag"><span data-t="Services">Services</span></a>
+    <a href="#contato" class="mag"><span data-t="Contact">Contact</span></a>
+  </div>
+  <button class="menu-btn" id="menuBtn">Menu</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero__top">
+    <span><b>●</b> Branding for food only</span>
+    <span>Brand · Menu · Website</span>
+    <span>Vila Madalena, SP · Since 2017</span>
+  </div>
+  <div class="hero__mid">
+    <h1 class="hero__title">
+      <span class="ln"><i>A full house</i></span>
+      <span class="ln"><i class="out">starts with the</i></span>
+      <span class="ln"><i><span class="red">brand.</span></i></span>
+    </h1>
+  </div>
+  <div class="hero__bottom">
+    <p class="hero__desc">We are a studio that works with food only. We create identity, menu, packaging and websites for restaurants, cafes and bars that want to pack the house, and keep it full.</p>
+    <a href="#contato" class="hero__cta mag"><b></b>I want to fill my dining room</a>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>Brand identity</span><span>Menu design</span><span>Packaging</span><span>Website &amp; Delivery</span><span>Photography</span>
+    <span>Brand identity</span><span>Menu design</span><span>Packaging</span><span>Website &amp; Delivery</span><span>Photography</span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="sobre" id="estudio">
+  <div>
+    <div class="sec-label rv">The studio</div>
+    <h2 class="sobre__big rv rv-1">We eat<br>at your restaurant<br><span class="m">before we design<br>anything.</span></h2>
+  </div>
+  <div class="sobre__side">
+    <p class="rv">Food branding isn't solved on a computer. Before we open Figma, we sit at your table, taste the menu and figure out why people come back (or don't). That's where a brand with real flavor comes from.</p>
+    <p class="rv rv-1">We turn down projects outside of food on purpose. It's our only obsession, and that's why we're good at it.</p>
+    <div class="sobre__stats">
+      <div class="rv"><div class="stat__n" data-count="82" data-suffix="+">0</div><div class="stat__l">Food brands created</div></div>
+      <div class="rv rv-1"><div class="stat__n" data-count="14">0</div><div class="stat__l">Cities served</div></div>
+      <div class="rv rv-2"><div class="stat__n" data-count="8" data-suffix=" years">0</div><div class="stat__l">Food only</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="cases__head">
+    <div>
+      <div class="sec-label rv">Selected work</div>
+      <h2 class="rv rv-1" style="margin-top:1.2rem">Brands that<br>fill tables</h2>
+    </div>
+    <a href="#contato" class="hero__cta mag rv rv-2"><b></b>See all case studies</a>
+  </div>
+  <div class="cases__grid">
+    <article class="case rv">
+      <div class="case__vis v-fornalha">
+        <span class="case__tag">Neapolitan pizzeria</span>
+        <div class="case__mark" style="font-size:3rem">FORNALHA<small>WOOD-FIRED · 2023</small></div>
+      </div>
+      <div class="case__info">
+        <div class="case__name">Fornalha<span>Brand + Menu + Website</span></div>
+        <div class="case__metric"><b>+180%</b><small>in reservations</small></div>
+      </div>
+    </article>
+    <article class="case rv rv-1">
+      <div class="case__vis v-limao">
+        <span class="case__tag">Vegetarian restaurant</span>
+        <div class="case__mark" style="font-size:2.6rem">verde<br>limão<small>FARM TO TABLE</small></div>
+      </div>
+      <div class="case__info">
+        <div class="case__name">Verde Limão<span>Rebranding + Delivery</span></div>
+        <div class="case__metric"><b>Sold out</b><small>3 weekends</small></div>
+      </div>
+    </article>
+    <article class="case rv">
+      <div class="case__vis v-boteco">
+        <span class="case__tag">Neighborhood bar</span>
+        <div class="case__mark" style="font-size:2.8rem">Boteco<br>do Zé<small>COLD BEER &amp; BITES</small></div>
+      </div>
+      <div class="case__info">
+        <div class="case__name">Boteco do Zé<span>Identity + Packaging</span></div>
+        <div class="case__metric"><b>2x</b><small>revenue</small></div>
+      </div>
+    </article>
+    <article class="case rv rv-1">
+      <div class="case__vis v-kaffa">
+        <span class="case__tag">Specialty coffee</span>
+        <div class="case__mark" style="font-size:3rem">KAFFA<small>SPECIALTY COFFEE</small></div>
+      </div>
+      <div class="case__info">
+        <div class="case__name">Kaffa<span>Brand + Website + Social</span></div>
+        <div class="case__metric"><b>3</b><small>new locations</small></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- MARQUEE 2 -->
+<div class="marquee marquee--red">
+  <div class="marquee__track">
+    <span>Your food is great. Your brand should be too</span><span>Your food is great. Your brand should be too</span>
+    <span>Your food is great. Your brand should be too</span>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="svc" id="servicos">
+  <div class="svc__pin">
+    <div class="svc__track" id="svcTrack">
+      <div class="svc__intro">
+        <div class="sec-label" style="color:var(--brasa)">What we do</div>
+        <h2>From concept<br>to delivery</h2>
+        <p>// Drag or scroll to explore →</p>
+      </div>
+      <div class="card mag"><div class="card__num">(01)</div><div class="card__body"><h3 class="card__t">Brand identity</h3><p class="card__d">Naming, logo, palette, typography and a complete brand guide. The visual soul of your restaurant, from the sign to the napkin.</p></div><div class="card__arrow">↗</div></div>
+      <div class="card mag"><div class="card__num">(02)</div><div class="card__body"><h3 class="card__t">Menu design</h3><p class="card__d">Menu design that sells the right dishes. Hierarchy, photography and menu engineering to raise your average check.</p></div><div class="card__arrow">↗</div></div>
+      <div class="card mag"><div class="card__num">(03)</div><div class="card__body"><h3 class="card__t">Packaging &amp; Delivery</h3><p class="card__d">From the cup to the bag. Packaging that protects the food and turns into marketing traveling across the city with every delivery.</p></div><div class="card__arrow">↗</div></div>
+      <div class="card mag"><div class="card__num">(04)</div><div class="card__body"><h3 class="card__t">Website &amp; Reservations</h3><p class="card__d">A fast website with menu, reservations and integration with delivery apps and Google. Built to be found and to fill your calendar.</p></div><div class="card__arrow">↗</div></div>
+      <div class="card mag"><div class="card__num">(05)</div><div class="card__body"><h3 class="card__t">Photography &amp; Social</h3><p class="card__d">Mouthwatering photos and content for social media. Your food looking great on screen is what pulls in the next table.</p></div><div class="card__arrow">↗</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="logos__label">Brands that have worked with BRASA</div>
+  <div class="logos__row">
+    <span>Fornalha</span><span>Verde Limão</span><span>Boteco do Zé</span><span>Kaffa</span><span>Maré</span><span>Dona Fubá</span><span>Tostado</span><span>Pão &amp; Cia</span>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="proc">
+  <div class="proc__head">
+    <div class="sec-label rv">How we work</div>
+    <h2 class="rv rv-1">A process<br>with no fluff</h2>
+  </div>
+  <div class="proc__step rv"><div class="proc__n">01</div><div class="proc__t">Immersion</div><div class="proc__d">We visit, eat and talk with your team. We get to know your audience, the neighborhood and what already works.</div></div>
+  <div class="proc__step rv"><div class="proc__n">02</div><div class="proc__t">Strategy</div><div class="proc__d">We define positioning and concept. A clear direction before any design, so nothing is wasted.</div></div>
+  <div class="proc__step rv"><div class="proc__n">03</div><div class="proc__t">Design</div><div class="proc__d">Identity, menu and packaging. This is where the brand gets a face, a smell and a flavor.</div></div>
+  <div class="proc__step rv"><div class="proc__n">04</div><div class="proc__t">Digital</div><div class="proc__d">Website, delivery and social media ready and integrated. Your brand online and easy to find.</div></div>
+  <div class="proc__step rv"><div class="proc__n">05</div><div class="proc__t">Delivery &amp; Support</div><div class="proc__d">A complete brand guide and 60 days of follow-up to keep everything running smoothly.</div></div>
+</section>
+
+<!-- TIME -->
+<section class="time">
+  <div class="time__head">
+    <div>
+      <div class="sec-label rv">Who does it</div>
+      <h2 class="rv rv-1" style="margin-top:1.2rem">People of<br>kitchen and pixel</h2>
+    </div>
+  </div>
+  <div class="time__grid">
+    <div class="member mag rv"><div class="member__av"><img src="img/marina.jpg" alt="Marina Costa" width="408" height="442" loading="lazy"></div><div class="member__nm">Marina Costa</div><div class="member__rl">Creative director</div></div>
+    <div class="member mag rv rv-1"><div class="member__av"><img src="img/rafael.jpg" alt="Rafael Nunes" width="408" height="347" loading="lazy"></div><div class="member__nm">Rafael Nunes</div><div class="member__rl">Designer &amp; branding</div></div>
+    <div class="member mag rv rv-2"><div class="member__av"><img src="img/bia.jpg" alt="Bia Tavares" width="408" height="524" loading="lazy"></div><div class="member__nm">Bia Tavares</div><div class="member__rl">Web &amp; motion</div></div>
+    <div class="member mag rv rv-3"><div class="member__av"><img src="img/teo.jpg" alt="Téo Andrade" width="373" height="325" loading="lazy"></div><div class="member__nm">Téo Andrade</div><div class="member__rl">Strategy</div></div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depo" id="depoimentos">
+  <div class="depo__head rv">
+    <h2>Who has<br>sat at the table</h2>
+    <span class="sec-label">Testimonials</span>
+  </div>
+  <div class="depo__grid">
+    <div class="depo__item rv">
+      <p>The line doubled after the new brand. People photograph the packaging and post it, it became free advertising.</p>
+      <div class="depo__who"><div class="depo__av"><img src="img/camila.jpg" alt="Camila Rocha" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Camila Rocha</div><div class="depo__rl">Owner · Fornalha</div></div></div>
+    </div>
+    <div class="depo__item rv rv-1">
+      <p>They understood the bar better than I did. They kept the soul of the place and still made everything look better. Revenue doubled.</p>
+      <div class="depo__who"><div class="depo__av"><img src="img/jorge.jpg" alt="Jorge Menezes" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Jorge Menezes</div><div class="depo__rl">Partner · Boteco do Zé</div></div></div>
+    </div>
+    <div class="depo__item rv">
+      <p>The new menu changed what people order. The average check went up without us raising a single price. Pure design.</p>
+      <div class="depo__who"><div class="depo__av"><img src="img/leticia.jpg" alt="Letícia Amaral" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Letícia Amaral</div><div class="depo__rl">Chef · Verde Limão</div></div></div>
+    </div>
+    <div class="depo__item rv rv-1">
+      <p>We opened 3 locations with BRASA's brand and every one launches consistent. It's like having a branding partner.</p>
+      <div class="depo__who"><div class="depo__av"><img src="img/felipe.jpg" alt="Felipe Dias" width="96" height="96" loading="lazy"></div><div><div class="depo__nm">Felipe Dias</div><div class="depo__rl">Founder · Kaffa</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contato">
+  <h2>Ready to<br>pack the house?</h2>
+  <a href="https://wa.me/5511987654321?text=Hi%20BRASA!%20I%20have%20a%20restaurant%20and%20I%27d%20like%20to%20talk%20about%20a%20brand%20project." class="cta__btn mag" target="_blank" rel="noopener">Message us on WhatsApp ↗</a>
+  <div class="cta__sub">hello@brasa.studio · (11) 98765-4321</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><b></b>BRASA</div>
+      <div class="footer__addr">Rua Aspicuelta, 232<br>Vila Madalena · São Paulo, SP<br>Since 2017</div>
+    </div>
+    <div class="footer__col">
+      <h4>Navigation</h4>
+      <a href="#cases" class="mag">Work</a>
+      <a href="#estudio" class="mag">Studio</a>
+      <a href="#servicos" class="mag">Services</a>
+      <a href="#contato" class="mag">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Social</h4>
+      <a href="#" class="mag">Instagram ↗</a>
+      <a href="#" class="mag">Behance ↗</a>
+      <a href="#" class="mag">LinkedIn ↗</a>
+    </div>
+    <div class="footer__col">
+      <h4>Talk to us</h4>
+      <a href="mailto:hello@brasa.studio" class="mag">hello@brasa.studio</a>
+      <a href="tel:+5511987654321" class="mag">(11) 98765-4321</a>
+    </div>
+  </div>
+  <div class="footer__bot">
+    <span>© 2026 BRASA Studio · Made with hunger ✳</span>
+    <span>Privacy policy · Terms</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511987654321?text=Hi%20BRASA!" class="wpp mag" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const isTouch = matchMedia('(hover:none)').matches;
+const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+if(!isTouch && !reduce){
+  const cur=document.getElementById('cur'),dot=document.getElementById('curDot');
+  let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`});
+  (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;cur.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+  const grow=()=>cur.classList.add('grow'),shrink=()=>cur.classList.remove('grow');
+  document.querySelectorAll('a,button,.card,.case,.member').forEach(el=>{el.addEventListener('mouseenter',grow);el.addEventListener('mouseleave',shrink)});
+}
+
+if(!isTouch && !reduce){
+  document.querySelectorAll('.mag').forEach(el=>{
+    el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.4}px)`});
+    el.addEventListener('mouseleave',()=>el.style.transform='');
+  });
+}
+
+addEventListener('load',()=>document.getElementById('hero').classList.add('in'));
+setTimeout(()=>document.getElementById('hero').classList.add('in'),100);
+
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';
+  if(reduce){el.textContent=end+suf;cio.unobserve(el);return}
+  let t0=null;
+  const step=t=>{if(!t0)t0=t;const p=Math.min((t-t0)/1300,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);cio.unobserve(el);
+})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+const svc=document.getElementById('servicos'),track=document.getElementById('svcTrack');
+function horiz(){
+  if(reduce||matchMedia('(max-width:860px)').matches){track.style.transform='';return}
+  const r=svc.getBoundingClientRect();
+  const scrollable=track.scrollWidth-innerWidth+40;
+  const total=svc.offsetHeight-innerHeight;
+  const p=Math.min(Math.max(-r.top/total,0),1);
+  track.style.transform=`translateX(${-p*scrollable}px)`;
+}
+function setSvcHeight(){
+  if(reduce||matchMedia('(max-width:860px)').matches){svc.style.height='';return}
+  svc.style.height=(innerHeight+(track.scrollWidth-innerWidth+40))+'px';
+}
+addEventListener('scroll',horiz,{passive:true});
+addEventListener('resize',()=>{setSvcHeight();horiz()});
+addEventListener('load',()=>{setSvcHeight();horiz()});
+setSvcHeight();horiz();
+
+const mb=document.getElementById('menuBtn'),nl=document.getElementById('navLinks');
+mb.addEventListener('click',()=>{const o=nl.classList.toggle('open');mb.textContent=o?'Close':'Menu'});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');mb.textContent='Menu'}));
+</script>
+
+</body>
+</html>
