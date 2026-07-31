@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" style="--bg:#f4f2ec;--surface:#ffffff;--ink:#14202e;--muted:#5c6472;--accent:#a9812f;--accent-ink:#ffffff;--note:#f1ecdd;--note-ink:#4a3c14;--line:#e2dfd6;--radius:8px;--font-display:'Libre Baskerville', serif;--font-body:'Inter', sans-serif;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Law Office of Darin Siefkes | Austin Business Attorney</title>
+<meta name="description" content="Flat-fee business law for Austin small businesses: formation, contracts, and IP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&amp;family=Inter:wght@300..800&amp;family=Space+Grotesk:wght@400..700&amp;family=JetBrains+Mono:wght@400..600&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Poppins:wght@300..700&amp;family=Manrope:wght@300..800&amp;family=DM+Sans:wght@300..800&amp;family=Archivo+Black&amp;family=IBM+Plex+Mono:wght@400..600&amp;family=Bricolage+Grotesque:wght@400..800&amp;display=swap" rel="stylesheet">
+<style id="sitecss">
+:root{
+  --bg:#f6f3ec;
+  --surface:#ffffff;
+  --ink:#1b1915;
+  --muted:#6d675c;
+  --accent:#dd8324;
+  --accent-ink:#ffffff;
+  --note:#fbeecb;
+  --note-ink:#4a4025;
+  --line:#e7e1d5;
+  --radius:16px;
+  --font-display:'Fraunces', Georgia, serif;
+  --font-body:'Inter', system-ui, sans-serif;
+  --maxw:1000px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---- Landing content ---- */
+.site{background:var(--surface);color:var(--ink)}
+/* re-anchor color/background at each block so a per-block --ink/--surface override
+   (set via "Cores & Tema" with that block selected) actually has somewhere to apply —
+   otherwise text/background inside the block just inherits the page-level value from
+   .site above, and the per-block CSS variable override is invisible even though it's
+   correctly set. */
+.site > *{color:var(--ink)}
+.site > .wrap > :first-child{background:var(--surface)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+/* sticky header: the shadow trick paints a full-bleed background behind the
+   (narrower, centered) .wrap box so page content doesn't peek through at the
+   sides while it's pinned — body has overflow-x:hidden so the huge offsets
+   never introduce a horizontal scrollbar. */
+.wrap.is-sticky{position:sticky;top:0;z-index:100;background:var(--surface);box-shadow:100vmax 0 0 var(--surface),-100vmax 0 0 var(--surface),0 1px 0 var(--line)}
+.eyebrow{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:600;font-size:20px;letter-spacing:-.01em}
+.brand .mark{width:26px;height:26px;border-radius:7px;background:var(--accent);flex:none;overflow:hidden}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted);font-weight:500}
+.nav-links span:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:18px;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s ease,background .2s ease,color .2s ease;white-space:nowrap;font-family:var(--font-body)}
+.btn:active{transform:translateY(1px)}
+.btn-solid{background:var(--accent);color:var(--accent-ink)}
+.btn-solid:hover{filter:brightness(1.06)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-lg{padding:14px 26px;font-size:15px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr .92fr;gap:clamp(28px,5vw,64px);align-items:center;padding:44px 0 64px}
+.badge{display:inline-block;background:var(--note);color:var(--note-ink);font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;margin-bottom:22px}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(38px,5.4vw,60px);line-height:1.02;letter-spacing:-.02em;margin-bottom:20px}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44ch;margin-bottom:28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stat .num{font-family:var(--font-display);font-size:26px;font-weight:600}
+.stat .lbl{font-size:12.5px;color:var(--muted);margin-top:2px}
+.media{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg,#efeae0,#e3ddd0);border:1px solid var(--line);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+.media img{width:100%;height:100%;object-fit:cover}
+/* every uploaded image (img.uploaded) is positioned absolute+inset:0 to fill its
+   holder — this containing block is what makes that sizing work. Without it, the
+   image has no positioned ancestor and sizes against the viewport instead, which
+   is exactly the "logo fills the whole screen" bug this fixes. */
+.editable-img{position:relative}
+/* hero layout variants */
+.hero > div:first-child{order:1}
+.hero > .media{order:2}
+.hero.img-left > div:first-child{order:2}
+.hero.img-left > .media{order:1}
+.hero.stack{grid-template-columns:1fr;text-align:center}
+.hero.stack > .media{order:2;max-width:760px;width:100%;margin:22px auto 0}
+.hero.stack .hero-cta,.hero.stack .stats{justify-content:center}
+.hero.stack .lead{margin-left:auto;margin-right:auto}
+.hero.textonly{grid-template-columns:1fr;text-align:center}
+.hero.textonly > .media{display:none}
+.hero.textonly .hero-cta,.hero.textonly .stats{justify-content:center}
+.hero.textonly .lead{margin-left:auto;margin-right:auto}
+
+/* logo cloud */
+.cloud{text-align:center;padding:34px 0 8px;border-top:1px solid var(--line)}
+.cloud .cap{font-size:12.5px;color:var(--muted);margin-bottom:22px}
+.cloud-row{display:flex;justify-content:center;gap:clamp(20px,5vw,52px);flex-wrap:wrap;align-items:center;opacity:.65}
+.cloud-row span{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--muted)}
+
+/* section header */
+.sec{padding:clamp(56px,8vw,96px) 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 52px}
+.sec-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,40px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 12px}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card .idx{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.card .idx b{font-family:var(--font-display);font-size:14px;color:var(--muted)}
+.chip{width:34px;height:34px;border-radius:9px;background:var(--note);color:var(--note-ink);display:flex;align-items:center;justify-content:center}
+.chip svg{width:18px;height:18px}
+.card h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+
+/* feature split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:center}
+.split > .txt{order:1}
+.split > .media{order:2}
+.split.img-left > .txt,.split.rev > .txt{order:2}
+.split.img-left > .media,.split.rev > .media{order:1}
+.split.img-top{grid-template-columns:1fr;text-align:center}
+.split.img-top > .media{order:1;max-width:780px;width:100%;margin:0 auto 8px}
+.split.img-top > .txt{order:2}
+.split.img-top .checks{align-items:center}
+.split.img-top .checks li{justify-content:center;text-align:left}
+.split.img-top .sub{margin-left:auto;margin-right:auto}
+.split.text-center{grid-template-columns:1fr;text-align:center;max-width:720px;margin:0 auto}
+.split.text-center > .media{display:none}
+.split.text-center .checks{align-items:center}
+.split.text-center .checks li{justify-content:center;text-align:left}
+.split.text-center .sub{margin-left:auto;margin-right:auto}
+/* generic block alignment */
+.al-center{text-align:center}
+.al-center .hero-cta,.al-center .stats,.al-center .cloud-row,.al-center .checks{justify-content:center}
+.al-center .lead,.al-center .sub,.al-center .sec-head p{margin-left:auto;margin-right:auto}
+.al-right{text-align:right}
+.al-right .hero-cta,.al-right .stats,.al-right .checks{justify-content:flex-end}
+.al-left{text-align:left}
+.split .txt h2{font-family:var(--font-display);font-weight:600;font-size:clamp(26px,3.6vw,36px);line-height:1.08;letter-spacing:-.02em;margin:12px 0 16px}
+.split .txt p.sub{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:46ch}
+.checks{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:26px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.checks .tick{width:22px;height:22px;border-radius:50%;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);flex:none;display:flex;align-items:center;justify-content:center}
+.checks .tick svg{width:13px;height:13px}
+.link-arrow{color:var(--accent);font-weight:600;font-size:15px;border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent);padding-bottom:2px}
+
+/* testimonial */
+.quote-band{background:var(--note);border-radius:calc(var(--radius) + 6px);padding:clamp(34px,5vw,56px);text-align:center;max-width:760px;margin:0 auto}
+.quote-band blockquote{font-family:var(--font-display);font-weight:500;font-size:clamp(20px,2.6vw,26px);line-height:1.35;letter-spacing:-.01em;color:var(--note-ink);font-style:italic;margin-bottom:26px}
+.person{display:flex;align-items:center;justify-content:center;gap:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);flex:none;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.person .who{text-align:left;font-size:13.5px;line-height:1.35}
+.person .who b{font-weight:700}
+.person .who span{color:var(--note-ink);opacity:.7;display:block}
+
+/* use cases */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case h3{font-family:var(--font-display);font-weight:600;font-size:18px;margin:14px 0 12px}
+.case ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.case li{font-size:14px;color:var(--muted);padding-left:16px;position:relative}
+.case li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* cta band */
+.cta{background:var(--accent);color:var(--accent-ink);text-align:center;padding:clamp(48px,7vw,80px) 24px;border-radius:calc(var(--radius) + 6px)}
+.cta h2{font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.06;letter-spacing:-.02em;margin-bottom:14px}
+.cta p{opacity:.9;font-size:16px;max-width:48ch;margin:0 auto 28px}
+.cta .btn-solid{background:var(--surface);color:var(--ink)}
+.cta .btn-outline{border-color:color-mix(in srgb,var(--accent-ink) 55%,transparent);color:var(--accent-ink)}
+
+/* footer */
+.foot{background:var(--ink);color:var(--surface);padding:52px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
+.foot .brand{color:var(--surface)}
+.foot p.tag{font-size:13px;opacity:.55;margin-top:12px}
+.foot h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin-bottom:14px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot li{font-size:14px;opacity:.8}
+.foot li:hover{opacity:1}
+.foot .copy{opacity:.45;font-size:12.5px;margin-top:38px;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+
+/* ===== novos tipos de bloco ===== */
+
+/* linha do tempo */
+.timeline{max-width:640px;margin:0 auto}
+.tl-item{display:flex;gap:20px;position:relative}
+.tl-item:not(:last-child){padding-bottom:38px}
+.tl-item:not(:last-child)::before{content:"";position:absolute;left:21px;top:44px;bottom:-38px;border-left:2px dashed var(--line)}
+.tl-node{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--surface);display:flex;align-items:center;justify-content:center;z-index:1}
+.tl-node svg{width:19px;height:19px}
+.tl-body{padding-top:2px}
+.tl-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tl-body h3{font-family:var(--font-display);font-weight:600;font-size:19px;margin:6px 0 6px}
+.tl-body p{color:var(--muted);font-size:14.5px}
+
+/* estatísticas grandes */
+.stats-lg-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat-lg{padding:0 20px;border-left:1px solid var(--line)}
+.stat-lg:first-child{border-left:none}
+.stat-lg .num{font-family:var(--font-display);font-weight:600;font-size:clamp(30px,5vw,46px);letter-spacing:-.02em}
+.stat-lg .lbl{font-size:12.5px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+
+/* galeria */
+.gallery-scroll{display:flex;gap:16px;overflow-x:auto;padding:0 clamp(20px,5vw,56px) 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.gallery-scroll::-webkit-scrollbar{height:8px}
+.gallery-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+.gallery-item{flex:none;width:min(78vw,380px);aspect-ratio:4/3;scroll-snap-align:start}
+
+/* equipe */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-photo{aspect-ratio:1/1;margin-bottom:16px}
+.team-card h3{font-family:var(--font-display);font-weight:600;font-size:17px;margin-bottom:2px}
+.team-role{font-size:12.5px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.team-cred{font-size:13px;color:var(--muted)}
+
+/* formulário de contato */
+.contact-form{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-field label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.05em}
+.form-field input,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:var(--font-body);font-size:15px;color:var(--ink);background:var(--surface)}
+.form-field input:focus,.form-field textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.form-field textarea{resize:vertical}
+
+/* localização */
+.loc-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.loc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
+.loc-ic{width:36px;height:36px;border-radius:9px;background:var(--note);color:var(--note-ink);display:flex;align-items:center;justify-content:center;flex:none}
+.loc-ic svg{width:16px;height:16px}
+.hours-box{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:10px;max-width:420px}
+.hours-row{display:flex;justify-content:space-between;font-size:14px;gap:12px}
+.hours-row span:first-child{color:var(--muted)}
+
+/* FAQ accordion */
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:22px 2px;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--font-display);font-size:clamp(16px,2vw,18px);font-weight:600;color:var(--ink)}
+.faq-plus{position:relative;width:20px;height:20px;flex:none}
+.faq-plus::before,.faq-plus::after{content:'';position:absolute;background:var(--ink);border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.faq-plus::before{left:0;top:50%;width:100%;height:2px;transform:translateY(-50%)}
+.faq-plus::after{top:0;left:50%;width:2px;height:100%;transform:translateX(-50%)}
+.faq-item.open .faq-plus::after{opacity:0;transform:translateX(-50%) rotate(90deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:600px}
+.faq-a p{margin:0;padding:0 2px 22px;color:var(--muted);font-size:15px;line-height:1.65;max-width:62ch}
+
+/* palavras em sequência (scroll fixo, JS ativa .wc-active) */
+.word-cycle-sec{position:relative}
+.wc-sticky{position:sticky;top:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;gap:6px}
+.wc-prefix{font-size:clamp(13px,2vw,16px);color:var(--muted);margin-bottom:6px}
+.wc-list{list-style:none;position:relative}
+.wc-list li{font-family:var(--font-display);font-weight:600;font-size:clamp(34px,7vw,68px);line-height:1.15;letter-spacing:-.02em;color:var(--line);opacity:.55;transition:opacity .35s ease, color .35s ease, transform .35s ease;transform:scale(.94)}
+.wc-list li.wc-active{opacity:1;color:var(--accent);transform:scale(1)}
+
+@media(max-width:820px){
+  .hero,.split,.split.rev .txt{grid-template-columns:1fr;order:0}
+  .steps,.cases{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .stats-lg-grid{grid-template-columns:1fr 1fr;row-gap:28px}
+  .stats-lg-grid .stat-lg:nth-child(3){border-left:none}
+  .team-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* ===== animações de seção (scroll-reveal) ===== */
+[data-anim]{opacity:0;will-change:opacity,transform}
+[data-anim].anim-run{opacity:1;transform:none;filter:none;transition:opacity .7s ease, transform .8s cubic-bezier(.16,.72,.2,1), filter .7s ease}
+[data-anim="fade-up"]{transform:translateY(34px)}
+[data-anim="fade-down"]{transform:translateY(-34px)}
+[data-anim="fade-left"]{transform:translateX(-44px)}
+[data-anim="fade-right"]{transform:translateX(44px)}
+[data-anim="zoom-in"]{transform:scale(.9)}
+[data-anim="zoom-out"]{transform:scale(1.07)}
+[data-anim="blur-in"]{filter:blur(16px)}
+[data-anim="rise"]{transform:translateY(54px) scale(.97)}
+[data-anim="flip-up"]{transform:perspective(1100px) rotateX(16deg) translateY(30px);transform-origin:top center}
+/* cascata: container visível, filhos entram em sequência */
+[data-anim="stagger"]{opacity:1;transform:none}
+[data-anim="stagger"] .card,[data-anim="stagger"] .stat,[data-anim="stagger"] .cloud-row span,[data-anim="stagger"] .checks li,[data-anim="stagger"] .stat-lg,[data-anim="stagger"] .team-card,[data-anim="stagger"] .tl-item,[data-anim="stagger"] .gallery-item{opacity:0;transform:translateY(26px)}
+[data-anim="stagger"].anim-run .card,[data-anim="stagger"].anim-run .stat,[data-anim="stagger"].anim-run .cloud-row span,[data-anim="stagger"].anim-run .checks li,[data-anim="stagger"].anim-run .stat-lg,[data-anim="stagger"].anim-run .team-card,[data-anim="stagger"].anim-run .tl-item,[data-anim="stagger"].anim-run .gallery-item{opacity:1;transform:none;transition:opacity .55s ease, transform .6s cubic-bezier(.16,.72,.2,1)}
+[data-anim="stagger"].anim-run :nth-child(2){transition-delay:.09s}
+[data-anim="stagger"].anim-run :nth-child(3){transition-delay:.18s}
+[data-anim="stagger"].anim-run :nth-child(4){transition-delay:.27s}
+[data-anim="stagger"].anim-run :nth-child(5){transition-delay:.36s}
+/* sequência: título → texto → botões, um após o outro (estilo Hero Geometric / Financial Hero).
+   O filho direto do bloco animado costuma ser um único <section>/wrapper (não as peças de
+   texto em si), então miramos o container de conteúdo real de cada tipo de seção —
+   .hero>div (badge/h1/p/cta/stats), .sec-head (eyebrow/h2/p), .split .txt, .cta, etc. */
+[data-anim="reveal-stack"]{opacity:1;transform:none}
+[data-anim="reveal-stack"] .hero>div:first-child>*,
+[data-anim="reveal-stack"] .sec-head>*,
+[data-anim="reveal-stack"] .split .txt>*,
+[data-anim="reveal-stack"] .cta>*,
+[data-anim="reveal-stack"] .quote-band>*,
+[data-anim="reveal-stack"] .foot-grid>*{opacity:0;transform:translateY(28px)}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*,
+[data-anim="reveal-stack"].anim-run .sec-head>*,
+[data-anim="reveal-stack"].anim-run .split .txt>*,
+[data-anim="reveal-stack"].anim-run .cta>*,
+[data-anim="reveal-stack"].anim-run .quote-band>*,
+[data-anim="reveal-stack"].anim-run .foot-grid>*{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1)}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*:nth-child(1),
+[data-anim="reveal-stack"].anim-run .sec-head>*:nth-child(1),
+[data-anim="reveal-stack"].anim-run .split .txt>*:nth-child(1),
+[data-anim="reveal-stack"].anim-run .cta>*:nth-child(1),
+[data-anim="reveal-stack"].anim-run .quote-band>*:nth-child(1),
+[data-anim="reveal-stack"].anim-run .foot-grid>*:nth-child(1){transition-delay:.05s}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*:nth-child(2),
+[data-anim="reveal-stack"].anim-run .sec-head>*:nth-child(2),
+[data-anim="reveal-stack"].anim-run .split .txt>*:nth-child(2),
+[data-anim="reveal-stack"].anim-run .cta>*:nth-child(2),
+[data-anim="reveal-stack"].anim-run .quote-band>*:nth-child(2),
+[data-anim="reveal-stack"].anim-run .foot-grid>*:nth-child(2){transition-delay:.2s}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*:nth-child(3),
+[data-anim="reveal-stack"].anim-run .sec-head>*:nth-child(3),
+[data-anim="reveal-stack"].anim-run .split .txt>*:nth-child(3),
+[data-anim="reveal-stack"].anim-run .cta>*:nth-child(3),
+[data-anim="reveal-stack"].anim-run .quote-band>*:nth-child(3),
+[data-anim="reveal-stack"].anim-run .foot-grid>*:nth-child(3){transition-delay:.35s}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*:nth-child(4),
+[data-anim="reveal-stack"].anim-run .split .txt>*:nth-child(4),
+[data-anim="reveal-stack"].anim-run .foot-grid>*:nth-child(4){transition-delay:.5s}
+[data-anim="reveal-stack"].anim-run .hero>div:first-child>*:nth-child(5),
+[data-anim="reveal-stack"].anim-run .split .txt>*:nth-child(5){transition-delay:.65s}
+/* hero image: arrives last, after the text stack finishes */
+[data-anim="reveal-stack"] .hero>.media{opacity:0;transform:translateY(28px)}
+[data-anim="reveal-stack"].anim-run .hero>.media{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.16,1,.3,1) .8s, transform .8s cubic-bezier(.16,1,.3,1) .8s}
+/* ===== efeitos presos ao scroll — duas mecânicas bem diferentes, ver runtime =====
+   "pin-reveal" (Smooth Scroll Hero): a imagem FIXA na tela por um trecho longo de
+   scroll enquanto uma janela central se expande até tela cheia e o zoom relaxa —
+   requer .media alta (reserva espaço de scroll) com um filho .scrollfx-pin
+   sticky dentro dela (criado pelo runtime na hora que o efeito é escolhido).
+   "grab-expand" (Scroll Expansion Hero): a imagem CRESCE capturando a roda do
+   mouse — o scroll da página fica bloqueado até a imagem ficar quase em tela
+   cheia; só então o scroll normal volta a funcionar. */
+[data-scrollfx]{--p:0}
+
+/* the hero's text moves on top of the image for pin-reveal (see ensureHeroOverlay),
+   so the image needs to take the full width instead of sharing a column with it */
+[data-scrollfx="pin-reveal"] .hero{display:block}
+[data-scrollfx="pin-reveal"] .media{aspect-ratio:auto;background:none;border:none;position:relative;height:calc(100vh + 1500px);display:block;overflow:visible}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin{
+  position:sticky;top:0;height:100vh;width:100%;overflow:hidden;
+  border-radius:var(--radius);background:linear-gradient(135deg,#efeae0,#e3ddd0);
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;
+  clip-path:polygon(calc(25% - 25%*var(--p)) calc(25% - 25%*var(--p)), calc(75% + 25%*var(--p)) calc(25% - 25%*var(--p)), calc(75% + 25%*var(--p)) calc(75% + 25%*var(--p)), calc(25% - 25%*var(--p)) calc(75% + 25%*var(--p)));
+  will-change:clip-path;
+}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin img.uploaded{transform:scale(calc(1.7 - .7*var(--p)));will-change:transform}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .ph{transform:scale(calc(1.35 - .35*var(--p)));will-change:transform}
+
+/* hero title/text moved on top of the pinned image (see ensureHeroOverlay in the runtime) —
+   partially visible up front (not fully hidden), then fades in the rest of the way
+   in sync with the same scroll-driven --p that opens the image's clip-path. */
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text{
+  position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;gap:0;
+  padding:0 8%;opacity:calc(.35 + .65*var(--p));
+  background:linear-gradient(180deg, rgba(10,10,10,.1), rgba(10,10,10,.5));
+}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text h1{color:var(--ink)}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .lead{color:var(--muted)}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .badge{background:rgba(255,255,255,.18);color:var(--ink);backdrop-filter:blur(6px)}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .hero-cta,
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .stats{justify-content:center}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .btn-outline{border-color:var(--line);color:var(--ink)}
+[data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text .stat .lbl{color:var(--muted)}
+
+[data-scrollfx="grab-expand"] .media{transition:width .05s linear,height .05s linear;max-width:95vw;max-height:85vh}
+[data-scrollfx="grab-expand"].scrollfx-active .media{box-shadow:0 30px 80px -30px rgba(0,0,0,.35)}
+
+/* Container Scroll: card tilts in 3D and settles flat + full-opacity as it's scrolled through */
+[data-scrollfx="tilt-scale"] .media{
+  opacity:calc(.35 + .65*var(--p));
+  transform:perspective(1000px) rotateX(calc(40deg - 40deg*var(--p))) translateY(calc(60px - 60px*var(--p))) scale(calc(.7 + .3*var(--p)));
+  transform-origin:50% 100%;will-change:transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce){
+  [data-scrollfx="tilt-scale"] .media{opacity:1!important;transform:none!important}
+  [data-scrollfx="pin-reveal"] .media{height:auto}
+  [data-scrollfx="pin-reveal"] .media .scrollfx-pin{position:relative;clip-path:none!important}
+  [data-scrollfx="pin-reveal"] .media .scrollfx-pin img.uploaded,[data-scrollfx="pin-reveal"] .media .scrollfx-pin .ph{transform:none!important}
+  [data-scrollfx="pin-reveal"] .media .scrollfx-pin .scrollfx-hero-text{opacity:1}
+  [data-anim],[data-anim] *{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="site">
+<div class="wrap">
+  <nav class="nav">
+    <div class="brand"><span class="mark"></span><span data-edit="">Business Law Office of Darin Siefkes</span></div>
+    <div class="nav-links"><span data-edit="">About</span><span data-edit="">Services</span><span data-edit="">Pricing</span><span data-edit="">Contact</span></div>
+    <div class="nav-right">
+      <span data-edit="" style="color:var(--muted);font-weight:500">Flat-fee pricing</span>
+      <a class="btn btn-solid" data-edit="">Get a Free Assessment</a>
+    </div>
+  </nav>
+</div>
+<div class="wrap" data-anim="fade-up">
+  <div class="cloud">
+    <div class="cap" data-edit="">What we help you protect</div>
+    <div class="cloud-row"><span data-edit="">Contracts</span><span data-edit="">Intellectual Property</span><span data-edit="">Business Formation</span><span data-edit="">Commercial Real Estate</span></div>
+  </div>
+</div>
+<div class="wrap" data-anim="fade-left">
+  <section class="sec" style="padding-top:0">
+    <div class="split img-left">
+      <div class="txt">
+        <span class="eyebrow" data-edit="">Why business owners choose us</span>
+        <h2 data-edit="">Prevention costs less than a lawsuit.</h2>
+        <p class="sub" data-edit="">Most legal services are billed as a flat fee, so you always know the cost before we start &mdash; and we&rsquo;re there before a problem happens, not just after.</p>
+        <ul class="checks"><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">Flat-fee pricing on most engagements</span></li><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">Entity formation: LLC, LP, S-corp &amp; C-corp</span></li><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">Contract review before you sign, not after</span></li></ul>
+        <a class="link-arrow" data-edit="">See how we work &rarr;</a>
+      </div>
+      <div class="editable-img media" data-img="">
+        <span class="ph">Photo of a contract review meeting</span>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="wrap" data-anim="zoom-in">
+  <section class="sec" style="padding-top:0">
+    <div class="quote-band">
+      <blockquote data-edit="">&ldquo;Darin caught a clause in a vendor contract that would have cost us thousands. Having him review things before we sign has paid for itself many times over.&rdquo;</blockquote>
+      <div class="person">
+        <div class="editable-img avatar" data-img=""></div>
+        <div class="who"><b data-edit="">&#9733;&#9733;&#9733;&#9733;&#9733; Client review</b><span data-edit="">Example based on public sentiment &mdash; verify before publishing</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="wrap" data-anim="stagger">
+  <section class="sec">
+    <div class="sec-head">
+      <span class="eyebrow" data-edit="">How it works</span>
+      <h2 data-edit="">A flat-fee assessment, no surprises.</h2>
+      <p data-edit="">Know the scope and the cost before any work begins.</p>
+    </div>
+    <div class="steps"><div class="card">
+      <div class="idx"><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span><b data-edit="">01</b></div>
+      <h3 data-edit="">Free initial assessment</h3>
+      <p data-edit="">Tell us what you need &mdash; formation, a contract, or ongoing counsel.</p>
+    </div><div class="card">
+      <div class="idx"><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></span><b data-edit="">02</b></div>
+      <h3 data-edit="">A flat-fee quote</h3>
+      <p data-edit="">Most engagements are quoted as a single flat fee, agreed upfront.</p>
+    </div><div class="card">
+      <div class="idx"><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></span><b data-edit="">03</b></div>
+      <h3 data-edit="">Ongoing protection</h3>
+      <p data-edit="">We become the legal counsel your business calls before signing anything.</p>
+    </div></div>
+  </section>
+</div>
+<div class="wrap" data-anim="fade-right">
+  <section class="sec" style="padding-top:0">
+    <div class="split">
+      <div class="txt">
+        <span class="eyebrow" data-edit="">Services</span>
+        <h2 data-edit="">Everything a growing business needs.</h2>
+        <p class="sub" data-edit="">From choosing the right entity to negotiating the deal, handled under one flat fee.</p>
+        <ul class="checks"><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">LLC, LP &amp; corporation formation</span></li><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">Contract drafting &amp; negotiation</span></li><li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"></path></svg></span><span data-edit="">Trademark &amp; IP registration</span></li></ul>
+        <a class="link-arrow" data-edit="">See all services &rarr;</a>
+      </div>
+      <div class="editable-img media" data-img="">
+        <span class="ph">Photo of a business meeting</span>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="wrap" data-anim="stagger">
+  <section class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow" data-edit="">Who we help</span>
+      <h2 data-edit="">From first-time founders to established companies.</h2>
+      <p data-edit="">Whatever stage your business is at, we scale with you.</p>
+    </div>
+    <div class="cases"><div class="card case">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-4 6 4 6M16 6l4 6-4 6"></path></svg></span>
+      <h3 data-edit="">Startups</h3>
+      <ul><li data-edit="">Entity formation</li><li data-edit="">Founder agreements</li><li data-edit="">Early-stage contracts</li></ul>
+    </div><div class="card case">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M4 19h16M8 15v-4M12 15V9M16 15v-6"></path></svg></span>
+      <h3 data-edit="">Growing Businesses</h3>
+      <ul><li data-edit="">Employment agreements</li><li data-edit="">Vendor &amp; client contracts</li><li data-edit="">Commercial leases</li></ul>
+    </div><div class="card case">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4.6"></path></svg></span>
+      <h3 data-edit="">Established Companies</h3>
+      <ul><li data-edit="">M&amp;A support</li><li data-edit="">IP protection</li><li data-edit="">Ongoing general counsel</li></ul>
+    </div></div>
+  </section>
+</div>
+<div class="wrap" data-anim="rise">
+  <section class="sec" style="padding-top:0">
+    <div class="cta">
+      <h2 data-edit="">Ready to protect what you&rsquo;ve built?</h2>
+      <p data-edit="">Get a free assessment and a flat-fee quote before any work begins.</p>
+      <div class="hero-cta" style="justify-content:center;margin:0">
+        <a class="btn btn-solid btn-lg" data-edit="">Get a Free Assessment</a>
+        <a class="btn btn-outline btn-lg" data-edit="">See Our Services</a>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><span class="mark"></span><span data-edit="">Business Law Office of Darin Siefkes</span></div>
+        <p class="tag" data-edit="">Flat-fee legal counsel for Austin small businesses.</p>
+      </div>
+      <div><h4 data-edit="">Services</h4><ul><li data-edit="">Business Formation</li><li data-edit="">Contracts</li><li data-edit="">Intellectual Property</li></ul></div>
+      <div><h4 data-edit="">Firm</h4><ul><li data-edit="">About Darin Siefkes</li><li data-edit="">Pricing</li><li data-edit="">Contact</li></ul></div>
+      <div><h4 data-edit="">Visit</h4><ul><li data-edit="">Austin, TX</li><li data-edit="">By appointment</li><li data-edit="">Free initial assessment</li></ul></div>
+    </div>
+    <div class="copy" data-edit="">Design preview by Black Agency (blackagency.space) &mdash; concept only, not affiliated with or published by the Business Law Office of Darin Siefkes.</div>
+  </div>
+</footer>
+</div>
+<script id="siteruntime">
+(function(){
+  var supported = 'IntersectionObserver' in window;
+  var io = null, currentRoot = undefined; /* undefined = not yet built */
+  function pickRoot(){
+    /* .frame-scroll only counts as the scroll root if it's actually clipping/scrolling —
+       a responsive rule removes its max-height under 920px so the page scrolls instead;
+       in that case (and in the exported site, where .frame-scroll doesn't exist) the
+       real browser viewport is the correct root. */
+    var fs = document.querySelector('.frame-scroll');
+    return (fs && fs.scrollHeight > fs.clientHeight + 2) ? fs : null;
+  }
+  function buildObserver(){
+    var wanted = pickRoot();
+    if(io && wanted===currentRoot) return io;
+    if(io) io.disconnect();
+    currentRoot = wanted;
+    io = supported ? new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('anim-run'); io.unobserve(e.target); }
+      });
+    }, {root: currentRoot, threshold: .16, rootMargin: '0px 0px -8% 0px'}) : null;
+    return io;
+  }
+  function observe(scope){
+    var inst=buildObserver();
+    var root = scope||document;
+    /* querySelectorAll only ever matches DESCENDANTS of root, never root itself — if a
+       freshly created element (from "+ Bloco", not yet revealed) has data-anim directly
+       on it and gets passed in as root, it was silently never observed and stayed
+       invisible forever. Check root itself too, not just what's inside it. */
+    var els = [...root.querySelectorAll('[data-anim]:not(.anim-run)')];
+    if(root.nodeType===1 && root.matches && root.matches('[data-anim]:not(.anim-run)')) els.push(root);
+    if(!inst){ els.forEach(function(el){ el.classList.add('anim-run'); }); return; }
+    els.forEach(function(el){ inst.observe(el); });
+  }
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer=setTimeout(function(){ if(pickRoot()!==currentRoot) observe(document); }, 200);
+  });
+  /* keyframes mirror the [data-anim="…"] CSS rules above — kept here so "Testar" can
+     play a single, self-contained Web Animations API animation instead of toggling
+     classes and waiting on a timer or a transitionend event to chain two phases.
+     Browsers throttle JS timers (setTimeout/setInterval) to ~once per second in
+     backgrounded/occluded/unfocused tabs — confirmed by direct measurement — so a
+     class-toggle-then-setTimeout dance could leave a block sitting invisible for a
+     second or more before it faded back in, reading as a stuck flicker rather than an
+     animation. A single el.animate() call has no such gap: it starts immediately and
+     plays start-to-finish under the browser's own animation engine, no JS timer or
+     event round-trip involved in the middle of it. */
+  var ANIM_KEYFRAMES = {
+    'fade-up': [{opacity:0, transform:'translateY(34px)'}, {opacity:1, transform:'none'}],
+    'fade-down': [{opacity:0, transform:'translateY(-34px)'}, {opacity:1, transform:'none'}],
+    'fade-left': [{opacity:0, transform:'translateX(-44px)'}, {opacity:1, transform:'none'}],
+    'fade-right': [{opacity:0, transform:'translateX(44px)'}, {opacity:1, transform:'none'}],
+    'zoom-in': [{opacity:0, transform:'scale(.9)'}, {opacity:1, transform:'none'}],
+    'zoom-out': [{opacity:0, transform:'scale(1.07)'}, {opacity:1, transform:'none'}],
+    'blur-in': [{opacity:0, filter:'blur(16px)'}, {opacity:1, filter:'none'}],
+    'rise': [{opacity:0, transform:'translateY(54px) scale(.97)'}, {opacity:1, transform:'none'}],
+    'flip-up': [{opacity:0, transform:'perspective(1100px) rotateX(16deg) translateY(30px)'}, {opacity:1, transform:'none'}]
+  };
+  var activeReplays = new WeakMap(); /* el -> Animation, so re-triggering cancels the one in flight */
+  function replay(el){
+    if(!el || !el.dataset.anim) return;
+    var prevAnim = activeReplays.get(el);
+    if(prevAnim) prevAnim.cancel();
+
+    if(el.dataset.anim === 'stagger' || el.dataset.anim === 'reveal-stack'){
+      /* container itself never fades (see CSS); only its children do, and purely via
+         the .anim-run class — no whole-block hide/show step needed or wanted here. */
+      el.classList.remove('anim-run');
+      void el.offsetWidth;
+      el.classList.add('anim-run');
+      return;
+    }
+
+    var frames = ANIM_KEYFRAMES[el.dataset.anim];
+    if(!frames || typeof el.animate !== 'function'){ el.classList.add('anim-run'); return; }
+    el.classList.add('anim-run'); /* end state, so it persists correctly once the animation finishes */
+    var anim = el.animate(frames, {duration:700, easing:'cubic-bezier(.16,.72,.2,1)', fill:'none'});
+    activeReplays.set(el, anim);
+    anim.onfinish = anim.oncancel = function(){ if(activeReplays.get(el)===anim) activeReplays.delete(el); };
+  }
+  /* ---- efeitos contínuos presos ao scroll (tilt-scale, clip-zoom) ----
+     Diferente do sistema acima (revela uma vez e para), estes recalculam a cada
+     evento de scroll um progresso 0→1 conforme o bloco atravessa a tela, e escrevem
+     esse valor numa custom property (--p) que o CSS usa via calc()/var() — assim o
+     efeito acompanha o scroll pra frente e pra trás, sem qualquer classe a alternar. */
+  /* pin-reveal needs an inner sticky element to hold the actual visual content —
+     .media becomes a TALL spacer (reserves scroll distance) and .scrollfx-pin is
+     the short, sticky "window" that stays glued to the top while it's scrolled
+     through. Created once, on demand, the first time the effect is selected. */
+  function ensureScrollFxPin(media){
+    var pin = media.querySelector(':scope > .scrollfx-pin');
+    if(pin) return pin;
+    pin = document.createElement('div');
+    pin.className = 'scrollfx-pin';
+    while(media.firstChild) pin.appendChild(media.firstChild);
+    media.appendChild(pin);
+    return pin;
+  }
+
+  /* Hero blocks keep title/text in their own grid column normally — but the
+     referenced hero (blackagency.space/blanc-dental) overlays the text ON TOP of
+     the pinned image, fading in as it opens. Moves the hero's real text div
+     (badge/h1/lead/cta/stats — same editable elements, just relocated) into the
+     sticky pin; restoreHeroOverlay puts it back for any other effect/mode. */
+  function ensureHeroOverlay(block, media){
+    var heroSection = block.querySelector('.hero');
+    if(!heroSection) return;
+    var textDiv = heroSection.querySelector(':scope > div:first-child');
+    if(!textDiv || textDiv.classList.contains('scrollfx-hero-text')) return;
+    var pin = ensureScrollFxPin(media);
+    textDiv.classList.add('scrollfx-hero-text');
+    pin.appendChild(textDiv);
+  }
+  function restoreHeroOverlay(block){
+    var heroSection = block.querySelector('.hero');
+    if(!heroSection) return;
+    var textDiv = heroSection.querySelector('.scrollfx-hero-text');
+    if(!textDiv) return;
+    textDiv.classList.remove('scrollfx-hero-text');
+    heroSection.insertBefore(textDiv, heroSection.firstChild);
+  }
+
+  function updateScrollFx(){
+    var els = document.querySelectorAll('[data-scrollfx]');
+    if(!els.length) return;
+    var root = pickRoot();
+    var viewH = root ? root.clientHeight : window.innerHeight;
+    var rootTop = root ? root.getBoundingClientRect().top : 0;
+    var scrollPos = root ? root.scrollTop : window.scrollY;
+    els.forEach(function(el){
+      var fx = el.dataset.scrollfx, p;
+      if(fx === 'pin-reveal'){
+        var media = el.querySelector('.media');
+        if(!media){ p = 0; }
+        else{
+          /* matches the reference component's own math: scrollY interpolated over a
+             fixed 1500px range (its "scrollHeight" prop) — not tied to viewport size.
+             .media's own top (not the sticky pin inside it) tracks normal document
+             flow throughout: it starts positive (below the viewport), crosses 0 the
+             moment the sticky child engages, and keeps going negative for as long as
+             there's tall spacer left — so -mTop is exactly how many pixels we've
+             scrolled into the pinned section, regardless of where it sits on the page. */
+          var mTop = media.getBoundingClientRect().top - rootTop;
+          p = (-mTop) / 1500;
+        }
+      }else if(fx === 'grab-expand'){
+        return; /* driven entirely by wheel/touch capture below, not scroll position */
+      }else{
+        var top = el.getBoundingClientRect().top - rootTop;
+        var docTop = top + scrollPos;
+        p = docTop < viewH * 0.6 ? scrollPos / (viewH * 0.6) : (viewH*0.92 - top) / (viewH*0.92 - viewH*0.3);
+      }
+      p = p<0?0:(p>1?1:p);
+      el.style.setProperty('--p', p.toFixed(4));
+    });
+  }
+  /* "palavras em sequência": a section reserves one "page" of scroll per word and
+     highlights whichever word the current scroll progress lands on — same root/rAF
+     plumbing as updateScrollFx, just a different block shape (no [data-scrollfx]/
+     .media involved, so it lives as its own pass). */
+  function updateWordCycle(){
+    var secs = document.querySelectorAll('.word-cycle-sec');
+    if(!secs.length) return;
+    var root = pickRoot();
+    var viewH = root ? root.clientHeight : window.innerHeight;
+    var rootTop = root ? root.getBoundingClientRect().top : 0;
+    secs.forEach(function(sec){
+      var list = sec.querySelector('.wc-list');
+      var items = list ? list.children : [];
+      var n = items.length || 1;
+      var wanted = Math.round(viewH * (0.55 * n + 0.45));
+      if(Math.abs(sec.offsetHeight - wanted) > 4) sec.style.height = wanted + 'px';
+      var top = sec.getBoundingClientRect().top - rootTop;
+      var extra = sec.offsetHeight - viewH;
+      var p = extra > 0 ? Math.min(1, Math.max(0, -top / extra)) : 0;
+      var idx = Math.min(n - 1, Math.floor(p * n));
+      for(var i=0;i<items.length;i++) items[i].classList.toggle('wc-active', i===idx);
+    });
+  }
+  var scrollFxTicking = false, scrollFxRoot = undefined;
+  function onScrollFx(){
+    if(scrollFxTicking) return;
+    scrollFxTicking = true;
+    requestAnimationFrame(function(){ updateScrollFx(); updateWordCycle(); scrollFxTicking = false; });
+  }
+  function bindScrollFx(){
+    var wanted = pickRoot();
+    if(scrollFxRoot !== undefined && wanted === scrollFxRoot){ updateScrollFx(); updateWordCycle(); return; }
+    if(scrollFxRoot !== undefined) (scrollFxRoot || window).removeEventListener('scroll', onScrollFx);
+    scrollFxRoot = wanted;
+    (scrollFxRoot || window).addEventListener('scroll', onScrollFx, {passive:true});
+    updateScrollFx();
+    updateWordCycle();
+  }
+  window.addEventListener('resize', function(){ bindScrollFx(); });
+
+  /* ---- grab-expand: the media box grows by capturing the mouse wheel / touch drag,
+     blocking normal page scroll until it's essentially full-screen, then releasing
+     scroll back to the page — same idea as the Scroll Expansion Hero reference,
+     scoped per-block (via a wheel listener on the block itself) rather than hijacking
+     the whole window, so it can't accidentally swallow scrolling anywhere else. */
+  var expandState = new WeakMap(); /* el -> {progress, expanded} */
+  function grabExpandApply(el, media, progress){
+    /* matches the reference's own growth curve (300→1550px width, 400→800px height
+       on desktop — a portrait-ish box stretching into a wide landscape one) scaled
+       to viewport units so it adapts to whatever screen this ends up on. */
+    media.style.width = (30 + progress*65) + 'vw';
+    media.style.height = (45 + progress*40) + 'vh';
+    el.style.setProperty('--p', progress.toFixed(4));
+    el.classList.toggle('scrollfx-active', progress > 0.02);
+  }
+  function bindGrabExpand(el){
+    if(expandState.has(el)) return;
+    var media = el.querySelector('.media');
+    if(!media) return;
+    var state = {progress:0, expanded:false};
+    expandState.set(el, state);
+    grabExpandApply(el, media, 0);
+    function onWheel(e){
+      if(el.dataset.scrollfx !== 'grab-expand') return;
+      if(state.expanded && e.deltaY > 0) return; /* fully grown: let the page keep scrolling down */
+      if(state.progress <= 0 && e.deltaY < 0) return; /* fully shrunk: let the page scroll up away from it */
+      e.preventDefault();
+      /* 0.0009 is the reference's own wheel sensitivity constant, kept as-is */
+      state.progress = Math.min(1, Math.max(0, state.progress + e.deltaY * 0.0009));
+      state.expanded = state.progress >= 1;
+      grabExpandApply(el, media, state.progress);
+    }
+    el.addEventListener('wheel', onWheel, {passive:false});
+  }
+  function initGrabExpand(){
+    document.querySelectorAll('[data-scrollfx="grab-expand"]').forEach(bindGrabExpand);
+  }
+
+  observe(document);
+  bindScrollFx();
+  initGrabExpand();
+  window.toggleFaq = function(btn){ var item = btn.closest('.faq-item'); if(item) item.classList.toggle('open'); };
+  window.SiteAnim = { observe: observe, replay: replay, refreshScrollFx: function(){ updateScrollFx(); updateWordCycle(); initGrabExpand(); }, ensureScrollFxPin: ensureScrollFxPin, ensureHeroOverlay: ensureHeroOverlay, restoreHeroOverlay: restoreHeroOverlay };
+})();
+</script>
+</body>
+</html>
